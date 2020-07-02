@@ -1,2 +1,44 @@
+* {
+    box-sizing: border-box;
+    
+  }
+.xxx{
+  background: url( "background.jpg") center/cover no-repeat;
+}
+
+/*h1 {
+    color: green;
+} */
+
+.flexbox{
+  padding-top: 10rem;
+  padding-left: 15rem;
+  padding-right: 3rem;
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 2rem ;
+  margin:0rem 2rem;
+  max-width: 20rem;
+}
+.founders{
+  height: 20rem;
+  width: 20rem;
+}
+
+.text{
+  display: flex;
+  
+}
+.textColor{
+  color: white;
+}
+
+img{
+  border-radius: 50%;
+}
 
 /*# sourceMappingURL=app.css.map*/
