@@ -10,11 +10,12 @@
    
     
 </head>
-<body class="xxx">
-    <!--put images from storage/images -->
+
+ <body class="xxx">
+   <!-- put images from storage/images -->
     <section class="flexbox">
     <div class="item">
-    <p><img class="founders" src=" https://ca.slack-edge.com/T011Q5YH07R-U012P2QTQ01-37e5fbd8dbe2-512" alt="Hazmin Firdaus Chik"></p>
+    <p><img class="founders" src="https://media-exp1.licdn.com/dms/image/C5103AQHpAyc_7nV9jg/profile-displayphoto-shrink_800_800/0?e=1599091200&v=beta&t=aeQRX9jxaKmumzcgICumAGydpRky5u0pzH37h7W0siQ" alt="Hazmin Firdaus Chik"></p>
     <h1 class="textColor">Hazmin Firdaus Chik</h1>
     <p class="text textColor">about Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatibus dolorem facilis natus quis deserunt quas sequi aliquam voluptas autem! Autem architecto quos ab in sunt beatae veritatis quod esse?</p>
     </div>
@@ -33,3 +34,4 @@
     
 </body>
 </html>
+
