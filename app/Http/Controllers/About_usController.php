@@ -8,7 +8,7 @@ class About_usController extends Controller
 {
     public function index ()
     {
-        return view('accounts.index');
+        return view('about_us.index');
     }
     
 }

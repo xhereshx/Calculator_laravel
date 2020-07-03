@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/about_us','About_usController@index');
+Route::get('/accounts', 'AccountsController@index');

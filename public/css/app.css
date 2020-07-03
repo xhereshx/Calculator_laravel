@@ -1,16 +1,18 @@
 * {
-    box-sizing: border-box;
-    
-  }
-.xxx{
-  background: url( "storege/images/background.jpg") center/cover no-repeat;
+  box-sizing: border-box;
+}
+
+.xxx {
+  background-image: url("/storege/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*h1 {
     color: green;
 } */
-
-.flexbox{
+.flexbox {
   padding-top: 10rem;
   padding-left: 15rem;
   padding-right: 3rem;
@@ -20,25 +22,29 @@
 .item {
   display: flex;
   flex-direction: column;
-  border: 2rem ;
-  margin:0rem 2rem;
+  border: 2rem;
+  margin: 0rem 2rem;
   max-width: 20rem;
 }
-.founders{
+
+.founders {
   height: 20rem;
   width: 20rem;
 }
 
-.text{
+.text {
   display: flex;
-  
 }
-.textColor{
+
+.textColor {
   color: white;
 }
 
-img{
+img {
   border-radius: 50%;
 }
 
+.accounttest {
+  color: red;
+}
 /*# sourceMappingURL=app.css.map*/
