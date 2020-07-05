@@ -2,8 +2,8 @@
   box-sizing: border-box;
 }
 
-.xxx {
-  background-image: url("/storege/images/background.jpg");
+.backgroundimage {
+  background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,7 +44,37 @@ img {
   border-radius: 50%;
 }
 
-.accounttest {
+.flexboxaccounts {
+  padding-top: 10rem;
+  padding-left: 10rem;
+  padding-right: 3rem;
+  display: flex;
+}
+
+.itemaccounts {
+  display: flex;
+  flex-direction: column;
+  border: 20rem;
+  margin: 0rem 10rem;
+  max-width: 30rem;
+}
+
+.forgottenPassword:hover {
   color: red;
+}
+
+.forgottenPassword {
+  color: white;
+}
+
+.flexboxforgottenpassword {
+  padding-top: 10rem;
+  padding-left: 30rem;
+  padding-right: 30rem;
+  display: flex;
+}
+
+.passwordpage {
+  color: white;
 }
 /*# sourceMappingURL=app.css.map*/
