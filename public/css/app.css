@@ -77,4 +77,28 @@ img {
 .passwordpage {
   color: white;
 }
+
+.flexboxproductpage {
+  padding-top: 10rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  border: white 1px solid;
+}
+
+.flexboxproducts {
+  display: flex;
+  border: white 1px solid;
+}
+
+.itemproducts {
+  padding: 0rem 5rem;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
 /*# sourceMappingURL=app.css.map*/
