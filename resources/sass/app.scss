@@ -85,22 +85,54 @@ img{
     display: flex;
     flex-direction: column;
     color: white;
-    border: white 1px solid;
+    //border: white 1px solid;
 
 }
 .flexboxproducts{
     display: flex;
-    border: white 1px solid;
+    padding-left: 5rem;
+    
 }
 
 .itemproducts{
-    padding: 0rem 5rem;
+  padding: 0rem 5rem;  
     align-items: center;
     //margin: 0rem 5rem;
+    border: white 1px solid;
+    margin: 5px;
+    width: 25rem;
+    //height: 20rem;
+    
     
 }
 .title{
     text-align: center;
 }
+.productsbutton{
+    text-decoration: none;
+}
 
+.flexboxmortgagecalculator{
+    padding-top: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    //border: white 1px solid;
+}
 
+.flexboxproducts{
+    display: flex;
+    padding-left: 5rem;
+  
+}
+
+.mortgagecalculatorbutton{
+    text-align: center;
+}
+.flexboxmortgageform{
+    display: flex;
+    padding-left: 5rem;
+   flex-direction: column;
+}

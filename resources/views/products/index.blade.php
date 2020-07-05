@@ -8,11 +8,11 @@
     <div class="title"><h1>Company name</h1></div>
     <div class="flexboxproducts">
         <div class="itemproducts"><h2>Mortgage Calculator</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit placeat laborum nesciunt, tempore nisi culpa tempora voluptate illo veniam iste repellat accusantium provident possimus reprehenderit minus debitis dolore quam similique?</p>
-        <button><a href="http://www.calculator.test/products/mortgage_calculator">Go to page</a></button></div>
+        <p>Are you available for mortgage? How much you can borrow? Let's calculate it with our great calculator.</p>
+        <button><a class="productsbutton" href="http://www.calculator.test/products/mortgage_calculator">Go to page</a></button></div>
         <div class="itemproducts"><h2>Tax Calculator</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis nesciunt quam aspernatur dolore sapiente praesentium, unde est omnis voluptate nulla odit necessitatibus fugiat, laboriosam debitis iure! Similique, voluptatum expedita.</p>
-        <button><a href="http://www.calculator.test/products/tax_calculator">Go to page</a></button></div>
+        <button><a class="productsbutton"href="http://www.calculator.test/products/tax_calculator">Go to page</a></button></div>
     </div>
 </div>
 
