@@ -22,7 +22,7 @@ if (!mix.inProduction()) {
     .sourceMaps()
 }
  
-mix.react('resources/js/Calculator/index.js', 'public/js/Calculator.js')
+mix.react('resources/js/Calculator/index.js', 'public/js')
     
  
     .browserSync({
