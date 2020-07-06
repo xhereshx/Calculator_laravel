@@ -132,7 +132,7 @@ img{
 
 //homepage
 
-body {
+.homepage {
   min-height: 100vh;
   display: flex;
   margin: 0;
@@ -140,24 +140,24 @@ body {
   opacity: 1.0;
 }
 
-aside {
+.aside--closed {
   background-color: #01415f;
   color: white;
   display: flex;
   flex: 0 0 auto;
-  width: 300px;
-  transition: 600ms;
+  width: 50px;
+  transition: 1000ms;
   overflow: hidden;
   padding: 0;
   min-height: 100%;
-  /* position: absolute; */
+  cursor: pointer;
 }
 
-.aside--closed {
-  width: 50px;
+.aside--open {
+  width: 300px;
 }
 
-main {
+.homepage_main {
   padding: 4rem;
 }
 
@@ -191,11 +191,11 @@ main {
   font-size: 1.5rem;
 }
 
-h1 {
+.menu_title {
   font-size: 4em;
 }
 
-p {
+.main_paragraph {
   font-size: 2em;
 }
 
@@ -203,7 +203,7 @@ p {
   margin-top: 15%;
 }
 
-button {
+.home__button--calculate {
   display: inline-block;
     font-size: 20px;
     line-height: 30px;
@@ -215,3 +215,23 @@ button {
     padding: 12px 35px;
     margin-top: 30px;
 }
+
+.sidebar_link {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar_link:hover {
+  color: #fed20c;
+}
+
+.home__link--calculate {
+  text-decoration: none;
+  color: white;
+}
+
+.home__link--calculate:hover {
+  color: #01415f;
+}
+
+

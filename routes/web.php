@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/welcome');
 });
 
-Route::get('/homepage','HomePageController@index');
+Route::get('/','HomePageController@index');
 Route::get('/about_us','About_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
