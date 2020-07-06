@@ -13,15 +13,30 @@
             <p>Income in Czk:</p>
             <input class="mortcalcinput" type="text" required>
             <p>Age:</p>
-            <input class="mortcalcinput" type="text" required>
+            <!-- <input class="mortcalcinput" type="text" required> -->
+            <select class="mortcalcinput"> 
+                @for ($i= 18; $i < 51; $i++)
+                    <option>{{$i}}</option>
+                
+                @endfor
+                
+                
+            </select>
             <p>Liabilities pen month:</p>
             <input class="mortcalcinput" type="text" required>
             <p>Loan term Years:</p>
-            <input class="mortcalcinput" type="text" required>
+           <!-- <input class="mortcalcinput" type="text" required> -->
+           <select class="mortcalcinput">
+            @for ($i= 5; $i < 36; $i++)
+                    <option>{{$i}}</option>
+                
+                @endfor
+           </select>
         </div>
         <br>
         <br>
         <div class="mortgagecalculatorbutton"><button><a class="productsbutton" href="http://www.calculator.test/products/mortgage_calculator/result">submit</a></button></div>
     </form>
     </div>
+   
 </body>

@@ -1,18 +1,29 @@
-<body>
+<div class="homepage">
 
   <aside id="aside" class="aside--closed">
     <div id="sidebar" class="sidebar">
-      <img class="icon" src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/15211315791553239378-512.png" alt="menu-icon">
+      <img class="icon" src="images/menu.svg" alt="menu-icon">
     </div>
     <div id="menu" class="menu">
-      <ul><h1>Menu</h1>
-        <li>Home</li>
-        <li>Account</li>
-        <li>Products</li>
-        <li>About Us</li>
+      <ul><h1 class="menu_title">Menu</h1>
+        <li><a class="sidebar_link" href="{{ url('/')}}">Home</a></li>
+        <li><a class="sidebar_link" href="{{ url('/accounts')}}">Accounts</a></li>
+        <li><a class="sidebar_link" href="{{ url('/products')}}">Products</a></li>
+        <li><a class="sidebar_link" href="{{ url('/about_us')}}">About Us</a></li>
       </ul>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#aside').hover(function(){
+                $('#aside').toggleClass('aside--open');
+            });
+        });
+      </script>
+
   </aside>
 
-</body>
+</div>
 

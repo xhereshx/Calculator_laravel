@@ -5,7 +5,7 @@
   
 
 <div class="flexboxproductpage">
-    <div class="title"><h1>Company name</h1></div>
+    <div class="title"><h1>Calculator Hub</h1></div>
     <div class="flexboxproducts">
         <div class="itemproducts"><h2>Mortgage Calculator</h2>
         <p>Are you available for mortgage? How much you can borrow? Let's calculate it with our great calculator.</p>

@@ -24,6 +24,7 @@ if (!mix.inProduction()) {
  
 mix.react('resources/js/Calculator/index.js', 'public/js/Calculator.js')
 .sass('resources/sass/app.scss', 'public/css')
+
      .browserSync({
         host: 'localhost',
         port: 3000,
