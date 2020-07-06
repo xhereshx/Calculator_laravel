@@ -1,4 +1,5 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}"></head>
+<head><link rel="stylesheet" href="{{'/css/app.css'}}">
+    </head>
 <body class="backgroundimage">
    <div class="flexboxaccounts">
        <div class="itemaccounts textColor">

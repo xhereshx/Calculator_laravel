@@ -1,21 +1,14 @@
 * {
     box-sizing: border-box;
-    
   }
-.backgroundimage{
-  background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg");
+
+html{
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background: url("https://pixabay.com/get/5ee6d0434353b114f6de877fc120357e083edbec5751734f73287b.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-
-
-
 }
-
-/*h1 {
-    color: green;
-} */
 
 .flexbox{
   padding-top: 10rem;
@@ -136,14 +129,82 @@ img{
     padding-left: 5rem;
    flex-direction: column;
 }
-.mortcalcinput{
-  max-width: 10rem;
+
+//homepage
+
+/* body {
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  color: white;
+  opacity: 1.0;
+}
+
+aside {
+  background-color: #01415f;
+  color: white;
+  display: flex;
+  flex: 0 0 auto;
+  width: 300px;
+  transition: 600ms;
+  overflow: hidden;
+  padding: 0;
+  min-height: 100%;
+  } 
+  /* position: absolute; */
+
+
+ /* .aside--closed {
+  width: 50px;
+}
+
+main {
+  padding: 4rem;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+}
+
+.sidebar {
+  flex: 0 0 50px;
+}
+
+.menu {
+  flex: 0 0 250px;
+}
+
+.menu_title {
+  font-size: 2em;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 2rem;
+  font-size: 0.8rem;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+p {
+  font-size: 2em;
 }
 
 .main_text {
   margin-top: 15%;
 }
-.main_button{
+
+button {
   display: inline-block;
     font-size: 20px;
     line-height: 30px;
@@ -154,4 +215,4 @@ img{
     border-radius: 30px;
     padding: 12px 35px;
     margin-top: 30px;
-}
+} */
