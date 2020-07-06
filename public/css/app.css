@@ -12,7 +12,7 @@ html {
 
 .flexbox {
   padding-top: 8rem;
-  padding-left: 15rem;
+  padding-left: 5rem;
   padding-right: 3rem;
   display: flex;
   margin-bottom: 8rem;
@@ -45,7 +45,7 @@ img {
 
 .flexboxaccounts {
   padding-top: 10rem;
-  padding-left: 10rem;
+  padding-left: 5rem;
   padding-right: 3rem;
   display: flex;
 }
