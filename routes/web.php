@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('/welcome');
 });
 
-Route::get('/','HomePageController@index');
-Route::get('/about_us','About_usController@index');
+Route::get('/home','HomePageController@index');
+Route::get('/about_us','Abou t_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
 Route::get('/personal_account','PersonalAccountController@index');

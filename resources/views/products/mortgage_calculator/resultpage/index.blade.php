@@ -1,9 +1,10 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}"></head>
+<head><link rel="stylesheet" href="{{'/css/app.css'}}">
+    <link rel="stylesheet" href="{{'/css/test.css'}}"></head>
 <body class="backgroundimage">
 
     
 <div class="flexboxproductpage">
-    <div class="title"><h1>Your mortgage can be:</h1>
+    <div class="title"><h1 class="test">Your mortgage can be:</h1>
     <p>result</p></div>
     <div class="flexboxproducts">
         <div class="itemproducts"><h2>Maximaly monthly payment is:</h2>
