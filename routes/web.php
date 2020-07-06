@@ -24,3 +24,5 @@ Route::get('/personal_account','PersonalAccountController@index');
 Route::get('/products/tax_calculator','taxCalculatorController@index');
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index');
 Route::get('/products','productPageController@index');
+Route::get('/products/mortgage_calculator/result','MortgageCalculatorResultController@index');
+Route::get('/','MainpageController@index');

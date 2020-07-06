@@ -28,7 +28,7 @@
             <p>Password:</p>
             <input type="password" minlength="8" required>
             <br>
-            <a class="forgottenPassword" href="http://localhost:3000/forgotten_password">Forgotten Password?</a>
+            <a class="forgottenPassword" href="http://www.calculator.test/forgotten_password">Forgotten Password?</a>
             <br>
             <br>
             <button>Login</button> 

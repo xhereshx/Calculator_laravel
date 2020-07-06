@@ -131,4 +131,25 @@ img {
   padding-left: 5rem;
   flex-direction: column;
 }
+
+.mortcalcinput {
+  max-width: 10rem;
+}
+
+.main_text {
+  margin-top: 15%;
+}
+
+.main_button {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #fed20c;
+  border-radius: 30px;
+  padding: 12px 35px;
+  margin-top: 30px;
+}
 /*# sourceMappingURL=app.css.map*/
