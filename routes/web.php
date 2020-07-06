@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home','homePageController@index');
+Route::get('/homepage','HomePageController@index');
 Route::get('/about_us','About_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
