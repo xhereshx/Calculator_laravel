@@ -1,9 +1,11 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}">
-    </head>
-<body class="backgroundimage">
 
-  
+@extends('layout', [
+  'title' => 'Products'
+])
 
+@section('content')
+
+<body class="main_layout">
 <div class="flexboxproductpage">
     <div class="title"><h1>Company name</h1></div>
     <div class="flexboxproducts">
@@ -15,6 +17,5 @@
         <button><a class="productsbutton"href="http://www.calculator.test/products/tax_calculator">Go to page</a></button></div>
     </div>
 </div>
-
-
 </body>
+@endsection

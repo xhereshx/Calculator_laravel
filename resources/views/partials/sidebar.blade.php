@@ -1,6 +1,6 @@
-<div class="homepage">
 
-  <aside id="aside" class="aside--closed">
+ <aside id="aside" class="aside--closed">
+   
     <div id="sidebar" class="sidebar">
       <img class="icon" src="images/menu.svg" alt="menu-icon">
     </div>
@@ -23,7 +23,6 @@
         });
       </script>
 
-  </aside>
+</aside>
 
-</div>
 
