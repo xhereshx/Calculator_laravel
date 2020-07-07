@@ -1,151 +1,19 @@
-* {
-    box-sizing: border-box;
-  }
-
-html{
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  //background: url("https://pixabay.com/get/5ee6d0434353b108feda8460c62e347c1337dce54e507440712f78d09f45c7_1920.jpg");
-  background: url("/images/background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.flexbox{
-  padding-top: 8rem;
-  padding-left: 5rem;
-  padding-right: 3rem;
-  // padding-bottom: 5rem;
-  display: flex;
-  margin-bottom: 8rem;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  border: 2rem ;
-  margin:0rem 2rem;
-  max-width: 20rem;
-}
-
-.founders{
-  height: 20rem;
-  width: 20rem;
-}
-
-.text{
-  display: flex;
-  
-}
-.textColor{
-  color: white;
-}
-
-img{
-  border-radius: 50%;
-}
-
-.flexboxaccounts{
-    padding-top: 10rem;
-    padding-left: 5rem;
-    padding-right: 3rem;
-    display: flex;
-  }
-  
-  .itemaccounts{
-    display: flex;
-    flex-direction: column;
-    border: 20rem ;
-    margin:0rem 10rem;
-    max-width: 30rem;
-  }
-
-.forgottenPassword:hover{
-    color: red;
-}  
-.forgottenPassword{
-    color: white;
-}
-.flexboxforgottenpassword{
-    padding-top: 10rem;
-    padding-left: 30rem;
-    padding-right: 30rem;
-    display: flex;
-}
-.passwordpage{
-    color: white;
-}
-.flexboxproductpage{
-    padding-top: 10rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    //border: white 1px solid;
-
-}
-.flexboxproducts{
-    display: flex;
-    padding-left: 5rem;
-    
-}
-
-.itemproducts{
-  padding: 0rem 5rem;  
-    align-items: center;
-    //margin: 0rem 5rem;
-    border: white 1px solid;
-    margin: 5px;
-    width: 25rem;
-    //height: 20rem;
-    
-    
-}
-.title{
-    text-align: center;
-}
-.productsbutton{
-    text-decoration: none;
-}
-
-.flexboxmortgagecalculator{
-    padding-top: 5rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    //border: white 1px solid;
-}
+@import 'background';
+@import 'about_us';
+@import 'accounts';
+@import 'forgottenpassword';
+@import 'products';
+@import 'mortgage_calculator';
+@import 'homepage';
 
 .flexboxproducts{
     display: flex;
     padding-left: 5rem;
   
-}
-
-.mortgagecalculatorbutton{
-    text-align: center;
-}
-.flexboxmortgageform{
-    display: flex;
-    padding-left: 5rem;
-   flex-direction: column;
-}
-.mortcalcinput{
-  max-width: 15rem;
 }
 
 //homepage
-
-.main_layout {
-  min-height: 100vh;
-  display: flex;
-  margin: 0;
-  color: white;
-  opacity: 1.0;
-}
+//navbar
 
 .aside--closed {
   background-color: #01415f;
@@ -182,10 +50,6 @@ img{
   flex: 0 0 250px;
 }
 
-.menu_title {
-  font-size: 2em;
-}
-
 .menu ul {
   list-style-type: none;
   padding-left: 0;
@@ -202,31 +66,6 @@ img{
   font-size: 4em;
 }
 
-.main_paragraph {
-  font-size: 1.8em;
-}
-
-.sub_paragraph {
-  font-size: 1.2em;
-}
-
-.main_text {
-  margin-top: 15%;
-}
-
-.home__button--calculate {
-  display: inline-block;
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 600;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #fed20c;
-    border-radius: 30px;
-    padding: 12px 35px;
-    margin-top: 30px;
-}
-
 .sidebar_link {
   color: white;
   text-decoration: none;
@@ -234,11 +73,6 @@ img{
 
 .sidebar_link:hover {
   color: #fed20c;
-}
-
-.home__link--calculate {
-  text-decoration: none;
-  color: white;
 }
 
 .home__link--calculate:hover {

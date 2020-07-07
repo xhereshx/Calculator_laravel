@@ -10,6 +10,10 @@ html {
   background-size: cover;
 }
 
+.textColor {
+  color: white;
+}
+
 .flexbox {
   padding-top: 8rem;
   padding-left: 5rem;
@@ -33,10 +37,6 @@ html {
 
 .text {
   display: flex;
-}
-
-.textColor {
-  color: white;
 }
 
 img {
@@ -116,11 +116,6 @@ img {
   color: white;
 }
 
-.flexboxproducts {
-  display: flex;
-  padding-left: 5rem;
-}
-
 .mortgagecalculatorbutton {
   text-align: center;
 }
@@ -141,6 +136,45 @@ img {
   margin: 0;
   color: white;
   opacity: 1;
+}
+
+.main_text {
+  margin-top: 15%;
+}
+
+.menu_title {
+  font-size: 2em;
+}
+
+.main_paragraph {
+  font-size: 1.8em;
+}
+
+.home__button--calculate {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #fed20c;
+  border-radius: 30px;
+  padding: 12px 35px;
+  margin-top: 30px;
+}
+
+.home__link--calculate {
+  text-decoration: none;
+  color: white;
+}
+
+.sub_paragraph {
+  font-size: 1.2em;
+}
+
+.flexboxproducts {
+  display: flex;
+  padding-left: 5rem;
 }
 
 .aside--closed {
@@ -178,10 +212,6 @@ img {
   flex: 0 0 250px;
 }
 
-.menu_title {
-  font-size: 2em;
-}
-
 .menu ul {
   list-style-type: none;
   padding-left: 0;
@@ -198,31 +228,6 @@ img {
   font-size: 4em;
 }
 
-.main_paragraph {
-  font-size: 1.8em;
-}
-
-.sub_paragraph {
-  font-size: 1.2em;
-}
-
-.main_text {
-  margin-top: 15%;
-}
-
-.home__button--calculate {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #fed20c;
-  border-radius: 30px;
-  padding: 12px 35px;
-  margin-top: 30px;
-}
-
 .sidebar_link {
   color: white;
   text-decoration: none;
@@ -230,11 +235,6 @@ img {
 
 .sidebar_link:hover {
   color: #fed20c;
-}
-
-.home__link--calculate {
-  text-decoration: none;
-  color: white;
 }
 
 .home__link--calculate:hover {
