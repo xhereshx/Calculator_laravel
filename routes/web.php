@@ -14,9 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/welcome');
 });
 
+Route::get('/home','HomePageController@index');
 Route::get('/about_us','About_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
@@ -24,3 +25,6 @@ Route::get('/personal_account','PersonalAccountController@index');
 Route::get('/products/tax_calculator','taxCalculatorController@index');
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index');
 Route::get('/products','productPageController@index');
+Route::get('/products/mortgage_calculator/result','MortgageCalculatorResultController@index');
+Route::get('/','MainpageController@index');
+Route::get('/test', 'connectionTestController@index');
