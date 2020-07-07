@@ -5,15 +5,35 @@
 @import 'products';
 @import 'mortgage_calculator';
 @import 'homepage';
+@import 'sidebar';
 
+
+// this is use on multiple pages
 .flexboxproducts{
     display: flex;
     padding-left: 5rem;
   
 }
+.textColor{
+  color: white;
+}
 
-//homepage
-//navbar
+.main_layout {
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  color: white;
+  opacity: 1.0;
+}
+
+.title{
+  text-align: center;
+}
+img{
+  border-radius: 50%;
+}
+
+//not assign
 
 .aside--closed {
   background-color: #01415f;
@@ -34,49 +54,6 @@
 
 .homepage_main {
   padding: 4rem;
-}
-
-.icon {
-  width: 100%;
-  height: auto;
-  padding: 8px;
-}
-
-.sidebar {
-  flex: 0 0 50px;
-}
-
-.menu {
-  flex: 0 0 250px;
-}
-
-.menu ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 2rem;
-  font-size: 0.8rem;
-}
-
-.menu li {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.menu_title {
-  font-size: 4em;
-}
-
-.sidebar_link {
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar_link:hover {
-  color: #fed20c;
-}
-
-.home__link--calculate:hover {
-  color: #01415f;
 }
 
 footer {

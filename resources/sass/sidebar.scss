@@ -1,0 +1,42 @@
+.sidebar {
+    flex: 0 0 50px;
+  }
+
+.icon {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+}
+
+.menu {
+    flex: 0 0 250px;
+}
+
+.menu_title {
+    font-size: 4em;
+}
+
+.sidebar_link {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 2rem;
+    font-size: 0.8rem;
+  }
+  
+.menu li {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.sidebar_link:hover {
+    color: #fed20c;
+}
+  
+.home__link--calculate:hover {
+    color: #01415f;
+}
