@@ -1,1 +1,138 @@
-//
+* {
+    box-sizing: border-box;
+    
+  }
+.backgroundimage{
+  background: url("https://cdn.pixabay.com/photo/2015/07/28/22/01/office-865091_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+
+
+}
+
+/*h1 {
+    color: green;
+} */
+
+.flexbox{
+  padding-top: 10rem;
+  padding-left: 15rem;
+  padding-right: 3rem;
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 2rem ;
+  margin:0rem 2rem;
+  max-width: 20rem;
+}
+.founders{
+  height: 20rem;
+  width: 20rem;
+}
+
+.text{
+  display: flex;
+  
+}
+.textColor{
+  color: white;
+}
+
+img{
+  border-radius: 50%;
+}
+
+.flexboxaccounts{
+    padding-top: 10rem;
+    padding-left: 10rem;
+    padding-right: 3rem;
+    display: flex;
+  }
+  
+  .itemaccounts{
+    display: flex;
+    flex-direction: column;
+    border: 20rem ;
+    margin:0rem 10rem;
+    max-width: 30rem;
+  }
+
+.forgottenPassword:hover{
+    color: red;
+}  
+.forgottenPassword{
+    color: white;
+}
+.flexboxforgottenpassword{
+    padding-top: 10rem;
+    padding-left: 30rem;
+    padding-right: 30rem;
+    display: flex;
+}
+.passwordpage{
+    color: white;
+}
+.flexboxproductpage{
+    padding-top: 10rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    //border: white 1px solid;
+
+}
+.flexboxproducts{
+    display: flex;
+    padding-left: 5rem;
+    
+}
+
+.itemproducts{
+  padding: 0rem 5rem;  
+    align-items: center;
+    //margin: 0rem 5rem;
+    border: white 1px solid;
+    margin: 5px;
+    width: 25rem;
+    //height: 20rem;
+    
+    
+}
+.title{
+    text-align: center;
+}
+.productsbutton{
+    text-decoration: none;
+}
+
+.flexboxmortgagecalculator{
+    padding-top: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    //border: white 1px solid;
+}
+
+.flexboxproducts{
+    display: flex;
+    padding-left: 5rem;
+  
+}
+
+.mortgagecalculatorbutton{
+    text-align: center;
+}
+.flexboxmortgageform{
+    display: flex;
+    padding-left: 5rem;
+   flex-direction: column;
+}

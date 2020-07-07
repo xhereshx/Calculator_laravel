@@ -11,7 +11,7 @@
     
 </head>
 
- <body class="xxx">
+ <body class="backgroundimage">
    <!-- put images from storage/images -->
     <section class="flexbox">
     <div class="item">
