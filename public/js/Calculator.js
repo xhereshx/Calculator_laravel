@@ -28603,7 +28603,7 @@ if (false) {} else {
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Calculator/App.css":
 /*!*************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/postcss-loader/src??ref--7-2!./resources/js/Calculator/App.css ***!
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/Calculator/App.css ***!
   \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -29224,7 +29224,7 @@ module.exports = function (css) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/postcss-loader/src??ref--7-2!./App.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Calculator/App.css");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/postcss-loader/src??ref--6-2!./App.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/Calculator/App.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -29309,27 +29309,15 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 
 /***/ }),
 
-/***/ "./resources/sass/test.scss":
-/*!**********************************!*\
-  !*** ./resources/sass/test.scss ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open 'C:\\Users\\Michal\\Desktop\\Nova_kariera\\IT_kariera\\bootcamp\\projects\\Calculator\\calculator_laravel\\resources\\sass\\test.scss'\n    at C:\\Users\\Michal\\Desktop\\Nova_kariera\\IT_kariera\\bootcamp\\projects\\Calculator\\calculator_laravel\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\Users\\Michal\\Desktop\\Nova_kariera\\IT_kariera\\bootcamp\\projects\\Calculator\\calculator_laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Michal\\Desktop\\Nova_kariera\\IT_kariera\\bootcamp\\projects\\Calculator\\calculator_laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at C:\\Users\\Michal\\Desktop\\Nova_kariera\\IT_kariera\\bootcamp\\projects\\Calculator\\calculator_laravel\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
-
-/***/ }),
-
 /***/ 0:
-/*!*****************************************************************************************************!*\
-  !*** multi ./resources/js/Calculator/index.js ./resources/sass/app.scss ./resources/sass/test.scss ***!
-  \*****************************************************************************************************/
+/*!**************************************************************************!*\
+  !*** multi ./resources/js/Calculator/index.js ./resources/sass/app.scss ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Michal\Desktop\Nova_kariera\IT_kariera\bootcamp\projects\Calculator\calculator_laravel\resources\js\Calculator\index.js */"./resources/js/Calculator/index.js");
-__webpack_require__(/*! C:\Users\Michal\Desktop\Nova_kariera\IT_kariera\bootcamp\projects\Calculator\calculator_laravel\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\Michal\Desktop\Nova_kariera\IT_kariera\bootcamp\projects\Calculator\calculator_laravel\resources\sass\test.scss */"./resources/sass/test.scss");
+module.exports = __webpack_require__(/*! C:\Users\Michal\Desktop\Nova_kariera\IT_kariera\bootcamp\projects\Calculator\calculator_laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

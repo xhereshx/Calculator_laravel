@@ -16,4 +16,6 @@ class taxCalculatorController extends Controller
 
         return view('products.tax_calculator.test', compact('form_configuration'));
     }
+
+    
 }
