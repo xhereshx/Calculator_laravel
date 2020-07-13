@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/welcome');
+    return view('/homepage.index');
 });
 
 Route::get('/home','HomePageController@index');
@@ -27,5 +27,5 @@ Route::get('/products/tax_calculator/test','taxCalculatorController@test');
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index');
 Route::get('/products','productPageController@index');
 Route::get('/products/mortgage_calculator/result','MortgageCalculatorResultController@index');
-Route::get('/','MainpageController@index');
+// Route::get('/','MainpageController@index');
 Route::get('/test', 'connectionTestController@index');
