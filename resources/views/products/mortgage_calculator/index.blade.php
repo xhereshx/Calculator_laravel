@@ -1,8 +1,9 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}"></head>
-<body class="backgroundimage">
+@extends('layout', [
+  'title' => 'Mortgage Calculator'
+])
 
-
-    
+@section('content')
+<body class='main_layout'>
     <div class="flexboxmortgagecalculator">
         <div class="title"><h1>Mortgage Calculator</h1></div>
         <form name="Calculator" method="POST" action="">
@@ -43,5 +44,5 @@
         <input type="submit" value="Submit"></div>
     </form>
     </div>
-   
 </body>
+@endsection

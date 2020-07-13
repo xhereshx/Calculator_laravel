@@ -37,4 +37,3 @@ mix.react('resources/js/test.js', 'public/js/test.js')
  
 // add versioning 
 mix.version();
-    
