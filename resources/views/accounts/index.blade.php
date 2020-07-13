@@ -7,22 +7,34 @@
 <div class="backgroundimage">
    <div class="flexboxaccounts">
        <div class="itemaccounts textColor">
-           <form><h1>Registration</h1>
+           <form method="POST" action=""  name="users">
+             @csrf
+             <h1>Registration</h1>
             <p>Name:</p>
-            <input type="text" required>
-            <p>Surename:</p>
-            <input type="text" required>
+            <input type="text" required name="name">
+            <p>Surname:</p>
+            <input type="text" required name="surname">
             <p>User name:</p>
-            <input type="text" required>
+            <input type="text" required name="username">
             <p>Email:</p>
-            <input type="text" required>
+            <input type="text" required name="email">
             <p>Password:</p>
             <input type="password" minlength="8" required name="password">
             <p>Password again:</p>
             <input type="password" minlength="8" required name="password_confirmation">
+            <script language='javascript' type='text/javascript'>
+              function check(input) {
+                  if (input.value != document.getElementById('password').value) {
+                      input.setCustomValidity('Password Must be Matching.');
+                  } else {
+                      // input is valid -- reset the error message
+                      input.setCustomValidity('');
+                  }
+              }
+          </script>
             <br>
             <br>
-            <button>Register</button> 
+            <input type="submit" value="Register">
            </form>
         </div>
        <div class="itemaccounts textColor">
