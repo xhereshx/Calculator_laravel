@@ -1,0 +1,24 @@
+.flexboxmortgagecalculator{
+    padding-top: 5rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    //border: white 1px solid;
+} 
+
+.mortgagecalculatorbutton{
+    text-align: center;
+} 
+.flexboxmortgageform{
+    display: flex;
+    padding-left: 5rem;
+   flex-direction: column;
+} 
+.mortcalcinput{
+  max-width: 15rem;
+} 
+/* .productsbutton{
+
+}*/

@@ -23,9 +23,19 @@ Route::get('/accounts', 'AccountsController@index');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
 Route::get('/personal_account','PersonalAccountController@index');
 Route::get('/products/tax_calculator','taxCalculatorController@index');
-Route::get('/products/tax_calculator/test','taxCalculatorController@test');
+
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index');
+//Route::get('/products/mortgage_calculator/test/{id}','mortgageCalculatorController@show');
+//Route::get('/products/mortgage_calculator/test','mortgageCalculatorController@show');
+Route::get('/products/mortgage_calculator/result/{id}','mortgageCalculatorController@show');
+Route::get('/products/mortgage_calculator/result','mortgageCalculatorController@show');
+Route::post('/products/mortgage_calculator','mortgageCalculatorController@store');
+
+//Route::get('/products/mortgage_calculator/result','mortgageCalculatorController@show');
+//Route::get('/products/mortgage_calculator/result/{id}','mortgageCalculatorController@show');
+
+
+
 Route::get('/products','productPageController@index');
-Route::get('/products/mortgage_calculator/result','MortgageCalculatorResultController@index');
-// Route::get('/','MainpageController@index');
-Route::get('/test', 'connectionTestController@index');
+Route::get('/','MainpageController@index');
+Route::get('/react', 'connectionTestController@index');

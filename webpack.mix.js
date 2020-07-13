@@ -23,8 +23,9 @@ if (!mix.inProduction()) {
 }
  
 mix.react('resources/js/Calculator/index.js', 'public/js/Calculator.js')
+mix.react('resources/js/test.js', 'public/js/test.js')
 .sass('resources/sass/app.scss', 'public/css')
-.sass('resources/sass/test.scss', 'public/test')
+//.sass('resources/sass/test.scss', 'public/test')
 
      .browserSync({
         host: 'localhost',

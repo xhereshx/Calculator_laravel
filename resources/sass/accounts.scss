@@ -1,0 +1,21 @@
+.flexboxaccounts{
+    padding-top: 10rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    display: flex;
+  }
+  
+.itemaccounts{
+    display: flex;
+    flex-direction: column;
+    border: 20rem ;
+    margin:0rem 10rem;
+    max-width: 30rem;
+  } 
+  
+.forgottenPassword:hover{
+    color: red;
+}  
+.forgottenPassword{
+    color: white;
+}

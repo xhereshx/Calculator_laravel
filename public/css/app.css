@@ -35,14 +35,6 @@ html {
   display: flex;
 }
 
-.textColor {
-  color: white;
-}
-
-img {
-  border-radius: 50%;
-}
-
 .flexboxaccounts {
   padding-top: 10rem;
   padding-left: 5rem;
@@ -99,10 +91,6 @@ img {
   width: 25rem;
 }
 
-.title {
-  text-align: center;
-}
-
 .productsbutton {
   text-decoration: none;
 }
@@ -114,11 +102,6 @@ img {
   display: flex;
   flex-direction: column;
   color: white;
-}
-
-.flexboxproducts {
-  display: flex;
-  padding-left: 5rem;
 }
 
 .mortgagecalculatorbutton {
@@ -135,12 +118,109 @@ img {
   max-width: 15rem;
 }
 
+/* .productsbutton{
+
+}*/
+.main_text {
+  margin-top: 15%;
+}
+
+.menu_title {
+  font-size: 2em;
+}
+
+.main_paragraph {
+  font-size: 1.8em;
+}
+
+.home__button--calculate {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #fed20c;
+  border-radius: 30px;
+  padding: 12px 35px;
+  margin-top: 30px;
+}
+
+.home__link--calculate {
+  text-decoration: none;
+  color: white;
+}
+
+.sub_paragraph {
+  font-size: 1.2em;
+}
+
+.sidebar {
+  flex: 0 0 50px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  padding: 8px;
+}
+
+.menu {
+  flex: 0 0 250px;
+}
+
+.menu_title {
+  font-size: 4em;
+}
+
+.sidebar_link {
+  color: white;
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 2rem;
+  font-size: 0.8rem;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.sidebar_link:hover {
+  color: #fed20c;
+}
+
+.home__link--calculate:hover {
+  color: #01415f;
+}
+
+.flexboxproducts {
+  display: flex;
+  padding-left: 5rem;
+}
+
+.textColor {
+  color: white;
+}
+
 .main_layout {
   min-height: 100vh;
   display: flex;
   margin: 0;
   color: white;
   opacity: 1;
+}
+
+.title {
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
 }
 
 .aside--closed {
@@ -162,83 +242,6 @@ img {
 
 .homepage_main {
   padding: 4rem;
-}
-
-.icon {
-  width: 100%;
-  height: auto;
-  padding: 8px;
-}
-
-.sidebar {
-  flex: 0 0 50px;
-}
-
-.menu {
-  flex: 0 0 250px;
-}
-
-.menu_title {
-  font-size: 2em;
-}
-
-.menu ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 2rem;
-  font-size: 0.8rem;
-}
-
-.menu li {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.menu_title {
-  font-size: 4em;
-}
-
-.main_paragraph {
-  font-size: 1.8em;
-}
-
-.sub_paragraph {
-  font-size: 1.2em;
-}
-
-.main_text {
-  margin-top: 15%;
-}
-
-.home__button--calculate {
-  display: inline-block;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 600;
-  color: #fff;
-  text-transform: uppercase;
-  background-color: #fed20c;
-  border-radius: 30px;
-  padding: 12px 35px;
-  margin-top: 30px;
-}
-
-.sidebar_link {
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar_link:hover {
-  color: #fed20c;
-}
-
-.home__link--calculate {
-  text-decoration: none;
-  color: white;
-}
-
-.home__link--calculate:hover {
-  color: #01415f;
 }
 
 footer {

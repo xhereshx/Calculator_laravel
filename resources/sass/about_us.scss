@@ -1,0 +1,29 @@
+.flexbox{
+    padding-top: 8rem;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    // padding-bottom: 5rem;
+    display: flex;
+    margin-bottom: 8rem;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    border: 2rem ;
+    margin:0rem 2rem;
+    max-width: 20rem;
+} 
+  
+.founders{
+    height: 20rem;
+    width: 20rem;
+}
+  
+.text{
+    display: flex;
+    
+}
+
+
+

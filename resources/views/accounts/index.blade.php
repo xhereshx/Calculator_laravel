@@ -17,9 +17,9 @@
             <p>Email:</p>
             <input type="text" required>
             <p>Password:</p>
-            <input type="password" minlength="8" required>
+            <input type="password" minlength="8" required name="password">
             <p>Password again:</p>
-            <input type="password" minlength="8" required>
+            <input type="password" minlength="8" required name="password_confirmation">
             <br>
             <br>
             <button>Register</button> 
