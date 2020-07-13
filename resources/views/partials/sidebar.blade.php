@@ -2,7 +2,7 @@
  <aside id="aside" class="aside--closed">
    
     <div id="sidebar" class="sidebar">
-      <img class="icon" src="images/menu.svg" alt="menu-icon">
+      <img class="icon" src="/images/menu.svg" alt="menu-icon">
     </div>
     <div id="menu" class="menu">
       <ul><h1 class="menu_title">Menu</h1>

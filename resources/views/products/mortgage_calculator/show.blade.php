@@ -1,6 +1,8 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}">
-</head>
-<body class="backgroundimage">
+@extends('layout', [
+  'title' => 'Personal Account'
+])
+@section('content')    
+<body class="main_layout">
 
 
 <div class="flexboxproductpage">
@@ -23,4 +25,5 @@
 </div>
 </div>
 </body>
+@endsection
 

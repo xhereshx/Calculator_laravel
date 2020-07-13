@@ -21,7 +21,10 @@ Route::get('/home','HomePageController@index');
 Route::get('/about_us','About_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::post('/accounts','AccountsController@store' );
+
+Route::get('/send_email', 'ForgottenPasswordController@sendEmail');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
+Route::post('/forgotten_password','ForgottenPasswordController@build');
 Route::get('/personal_account','PersonalAccountController@index');
 Route::get('/products/tax_calculator','taxCalculatorController@index');
 
