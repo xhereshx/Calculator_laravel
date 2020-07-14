@@ -51,6 +51,7 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
+            'driver' => 'mailgun',
         ],
 
         'postmark' => [

@@ -1,22 +1,15 @@
-<?php 
-$form_configuration=json_decode(json_encode($form_configuration,false));
-//var_dump($form_configuration);
-//dd($form_configuration);
-// print_r($form_configuration[0]->name);
-?>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Content-Language" content="cs">
-	<title>Tax Calculator USA 2018</title>
-	<style>
+@extends('layout', [
+    'title' => 'Tax calculator form TEST'
+])
+
+@section('styles')
+<style>
 		body {
 			background: #CCCCCC;
 			font-family: sans-serif, serif;
 			padding: 20px 20px 0 20px;
 		}
-		.page {
+		.pageTaxCalc {
 			position: relative;
 			border: 1px solid #666;
 			background: white;
@@ -28,7 +21,7 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
 			-moz-box-shadow: 3px 3px 8px #666;
 			box-shadow: 3px 3px 8px #666;
 		}
-		.page .bg {
+		.pageTaxCalc .bg {
 			width: 100%
 		}
 		.calcOverWin {
@@ -43,10 +36,6 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
 			padding: 10px;
             z-index: 10;
             background-color: rgba(255,255,255, 0.9);
-        }
-        .calcOverWinMessage >div {
-            
-
         }
 		#g, #s, #e {
 			text-align: center;
@@ -71,67 +60,72 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
         }
 /*  pricing */
 
-        * {
-  box-sizing: border-box;
-}
+                        * {
+                box-sizing: border-box;
+                }
 
-.columns {
-  float: left;
-  width: 33.3%;
-  padding: 8px;
-  border: #4CAF50 1px solid;
-}
+            .columnsTaxCalc {
+            float: left;
+            width: 33.3%;
+            padding: 8px;
+            border: #4CAF50 1px solid;
+            }
 
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
+            .priceTaxCalc {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            }
 
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
+            .priceTaxCalc:hover {
+            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+            }
 
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
+            .priceTaxCalc .headerTaxCalc {
+            background-color: #111;
+            color: white;
+            font-size: 25px;
+            }
 
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-}
+            .priceTaxCalc li {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            }
 
-.price .grey {
-  background-color: #eee;
-  font-size: 20px;
-}
+            .priceTaxCalc .grey {
+            background-color: #eee;
+            font-size: 20px;
+            }
+            /* The "Sign Up" button */
+            .buttonTaxCalc {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            }
+            .textTaxCalc{
+            font
+            }
 
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}
+            /* Change the width of the three columns to 100%
+            (to stack horizontally on small screens) */
+            @media only screen and (max-width: 600px) {
+            .columnsTaxCalc {
+                width: 100%;
+            }
+            }
 .printMenuCalculator {
 			position: absolute;
 			position: fixed;
 			top: 5%;
-			left: 2%;
+			right: 2%;
 			width: 20%;
 			height: 30%;
 			padding: 10px;
@@ -145,59 +139,71 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
         }
 
 	</style>
-</head>
-{{--@section('content')--}}
+@endsection
+<?php 
+$form_configuration=json_decode(json_encode($form_configuration,false));
+//var_dump($form_configuration);
+//dd($form_configuration);
+// print_r($form_configuration[0]->name);
+?>
+@section('content')
+<body class="main_layout">
 <div class="form">
-    <div class="page printMenuCalculator">
-        <ol>
-            <li>Fill all grey fields</li>
-            <li>Print pdf<br>
-                <a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="http://trevellasmanorfarmcampsite.co.uk/wp-content/uploads/2017/08/pdf-printer-icon.png"><br><em>PDF file for print will be downloaded.</em></a><br>
-            </li>
-        </ol>
-    </div>    
-    <div class="page calcOverWin">
-        <div class="calcOverWinMessage">
-            <div>
-                <div id="s"><br><br>We are happy to have you here, but it seems you are not registered.<br>Please select the right plan.<br><br></div>
+    @if (Auth::check())
+    
+            <div class="pageTaxCalc printMenuCalculator">
+                <ol>
+                    <li>Fill all grey fields</li>
+                    <li>Print pdf<br>
+                        <a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="http://trevellasmanorfarmcampsite.co.uk/wp-content/uploads/2017/08/pdf-printer-icon.png"><br><em>PDF file for print will be downloaded.</em></a><br>
+                    </li>
+                </ol>
             </div>    
-            <div>
-                <!-- menu -->
-                <div class="columns">
-                    <ul class="price">
-                        <li class="header">Basic</li>
-                        <li class="grey">$ 0 / year</li>
-                        <li>Free calculation up to $ 6000</li>
-                        <li class="grey"><a href="{{ url('/products')}}" class="button">Sign Up</a></li>
-                    </ul>
-                    </div>
-                    
-                    <div class="columns">
-                        <ul class="price">
-                            <li class="header" style="background-color:#4CAF50">Pro</li>
-                            <li class="grey">$ 24.99 / year</li>
-                            <li>Print pdf</li>
-                            <li>Save history</li>
-                            <li class="grey"><a href="{{ url('/products')}}" class="button">Sign Up</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="columns">
-                        <ul class="price">
-                            <li class="header">Premium</li>
-                            <li class="grey">$ 49.99 / year</li>
-                            <li>Print pdf</li>
-                            <li>Save history</li>
-                            <li>Online Support</li>
-                            <li class="grey"><a href="{{ url('/products')}}" class="button">Sign Up</a></li>
-                        </ul>
-                    </div>
+    @else
+            <div class="pageTaxCalc calcOverWin">
+                <div class="calcOverWinMessage">
+                    <div>
+                        <div id="s"><br><br>We are happy to have you here, but it seems you are not registered.<br>Please select the right plan.<br><br></div>
+                    </div>    
+                    <div>
+                        <!-- menu -->
+                        <div class="columnsTaxCalc">
+                            <ul class="priceTaxCalc">
+                                <li class="headerTaxCalc">Basic</li>
+                                <li class="greyTaxCalc">$ 0 / year</li>
+                                <li>Free calculation up to $ 6000</li>
+                                <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
+                            </ul>
+                            </div>
+                            
+                            <div class="columnsTaxCalc">
+                                <ul class="priceTaxCalc">
+                                    <li class="headerTaxCalc" style="background-color:#4CAF50">Pro</li>
+                                    <li class="greyTaxCalc">$ 24.99 / year</li>
+                                    <li>Print pdf</li>
+                                    <li>Save history</li>
+                                    <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="columnsTaxCalc">
+                                <ul class="priceTaxCalc">
+                                    <li class="headerTaxCalc">Premium</li>
+                                    <li class="greyTaxCalc">$ 49.99 / year</li>
+                                    <li>Print pdf</li>
+                                    <li>Save history</li>
+                                    <li>Online Support</li>
+                                    <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>        
                 </div>
-            </div>        
-        </div>
-    </div>
+            </div>
+    @endif
+
         @foreach ($form_configuration as $page)
-                    <div class="page">
+                    <div class="pageTaxCalc">
                     {{--<img src="http://www.securetax.eu/00BootCamp/{{ $page->bg_image }}" class="bg" style="width: {{ $page ->page_width }}px height: {{ $page ->page_height }}px ">--}}
                     <img src="http://www.securetax.eu/00BootCamp/{{ $page->bg_image }}" class="bg" style="width: 793px">
                         @foreach ($page->taxformdetails as $field_uid => $field)
@@ -236,11 +242,10 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
 
     </div>
     
-{{-- @endsection --}}
     <script>
-    
-
-
+        
+        
+        
         document.querySelector('[name="%FDitem8%"]').addEventListener('change', () => {
    calculate();
 });
@@ -282,6 +287,8 @@ function calculate(){
         const FDitem75=FDitem61-FDitem71;
         document.querySelector("[name='%FDitem75%']").innerHTML = Math.floor(parseFloat(FDitem75)).toFixed(2);
     }
-
-    }
-    </script>
+    
+}
+</script>
+</body>
+@endsection

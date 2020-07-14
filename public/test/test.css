@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+.test {
+  color: orange;
+=======
 html {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   background: url("/images/background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+>>>>>>> c3fc977e96ca871e54384aacfddd084db615e6c1
 }
 /*# sourceMappingURL=test.css.map*/

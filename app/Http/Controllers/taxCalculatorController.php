@@ -22,11 +22,6 @@ class taxCalculatorController extends Controller
 
         return view('products.tax_calculator.test', compact('form_configuration'));
     }
-    public function test1(){
 
-        $form_db_fields = DB::select('SELECT * FROM `06_forms` LEFT JOIN `06_forms_detail` ON 06_forms.uid = 06_forms_detail.page_id ORDER BY 06_forms.sort ASC');
-        //return DB::collection($form_db_fields);
-        //return taxCalculator::collection($form_db_fields);
-        return $form_db_fields;
-    }
+    
 }
