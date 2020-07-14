@@ -76,49 +76,9 @@
 
         }
 	</style>
-	<script type="text/javascript" src="/libraries/jquery/jquery.js"></script>
-	<script type="text/javascript" src="/libraries/jquery/jquery.file.download.js"></script>
-	<script type="text/javascript">
-		function generate(){
-			$('#p').css('display','none');
-			$('#d').css('display','none');
-			$('#g').css('display','block');
-			$.fileDownload('/print/2177782_2018_usafd_63D112071485823DE41B52450728BC', {
-				successCallback: function (url){
-					$('#g').css('display','none');
-					$('#s').css('display','block');
-				},
-				failCallback: function (html, url) {
-					$('#g').css('display','none');
-					$('#e').css('display','block');
-				}
-			});
-			return false;
-        }
-
-	</script>
 </head>
-<body cz-shortcut-listen="true">
     <form>
-    <audio class="audio-for-speech" src=""></audio>
-    <div class="translate-tooltip-mtz hidden">
-        <div class="header">
-            <div class="header-controls">
-                <span class="sound-translate"></span>
-                <span class="settings"></span>
-            </div>
-            <div class="translate-icons">
-                <img class="from" src="">
-                <img class="arrow" src="chrome-extension://gafjimepaiecpbmbmgaefokbekhoecaj/images/right-arrow.png">
-                <img class="to" src="">
-            </div>
-        </div>
-        <div class="translated-text">
-            <div class="words"></div>
-            <div class="sentences"></div>
-        </div>
     </div>
-    <span class="translate-button-mtz" style="top: 8125.11376953125px;left: 412.990047454834px;"></span>
 	<div class="page print">
 		<a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="/graphics/images/print_32.png"> Print<em>PDF file for print will be downloaded.</em></a><br>
 		<a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="d"><img src="/graphics/images/pdf_32.png"> Save as PDF<em>Adobe Acrobat or some program which can handle PDF files.</em></a>
@@ -168,7 +128,7 @@ The barcode and your unique TaxID are very important for correct filing of your 
 <input type="number" id="item2" style="position: absolute;left: 636px;top: 663px;font-size: 13px;width: 97px;text-align: right;color: #000;border:none;" placeholder="0.00" ></>
 <div style="position: absolute;left: 485px;top: 233px;font-size: 13px;width: 84px;text-align: left;color: #000"></div>
 <input type="number" id="item3" style="position: absolute;left: 623px;top: 896px;font-size: 13px;width: 110px;text-align: right;color: #000;border:none;" placeholder="0.00" ></>
-<div style="position: absolute;left: 485px;top: 219px;font-size: 13px;width: 84px;text-align: left;color: #000"></div>
+<div style="position: absolute;left: 485px;top: 219px;font-size: 13px;width: 84px;text-align: left;color: rgb(172, 164, 164)"></div>
 <div style="position: absolute;left: 589px;top: 109px;font-size: 13px;width: 175px;text-align: center;color: #000"></div>
 <div style="position: absolute;left: 623px;top: 866px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
 <div style="position: absolute;left: 144px;top: 136px;font-size: 17px;width: 466px;text-align: left;color: #000"></div>
