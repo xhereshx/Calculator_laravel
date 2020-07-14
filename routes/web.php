@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('/welcome');
+// });
 Route::get('/', function () {
-    return view('/welcome');
+    return view('/homepage.index');
 });
+
 
 Route::get('/home','HomePageController@index');
 Route::get('/about_us','About_usController@index');
@@ -27,5 +31,12 @@ Route::get('/products/tax_calculator/test','taxCalculatorController@test');
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index');
 Route::get('/products','productPageController@index');
 Route::get('/products/mortgage_calculator/result','MortgageCalculatorResultController@index');
-Route::get('/','MainpageController@index');
+//Route::get('/','MainpageController@index');
 Route::get('/react', 'connectionTestController@index');
+Route::get('/testmodel', function () {
+    $form_configuration = \App\Taxform::with('taxformdetails')->orderBy('sort', 'ASC')->get();
+    //return view('products.tax_calculator.petr',['form_configuration'=>$form_configuration]);
+    return view('products.tax_calculator.petr',compact('form_configuration'));
+}
+
+);

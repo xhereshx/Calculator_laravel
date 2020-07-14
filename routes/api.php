@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// list of all pages of tax forms
+
+Route::get('taxforms','taxCalculatorController@test1');
+
+// one page of tax form
+Route::get('taxform/{id}','taxCalculatorController@show');
+
+
+
