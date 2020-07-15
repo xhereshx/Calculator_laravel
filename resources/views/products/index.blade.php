@@ -14,7 +14,7 @@
         <button><a class="productsbutton" href="http://www.calculator.test/products/mortgage_calculator">Go to page</a></button></div>
         <div class="itemproducts"><h2>Tax Calculator</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis nesciunt quam aspernatur dolore sapiente praesentium, unde est omnis voluptate nulla odit necessitatibus fugiat, laboriosam debitis iure! Similique, voluptatum expedita.</p>
-        <button><a class="productsbutton"href="http://www.calculator.test/products/tax_calculator">Go to page</a></button></div>
+        <button><a class="productsbutton"href="http://www.calculator.test/testmodel">Go to page</a></button></div>
     </div>
 </div>
 </body>

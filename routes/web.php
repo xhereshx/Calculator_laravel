@@ -25,7 +25,10 @@ Route::get('/home','HomePageController@index');
 Route::get('/about_us','About_usController@index');
 Route::get('/accounts', 'AccountsController@index');
 Route::post('/accounts','AccountsController@store' );
+
+Route::get('/send_email', 'ForgottenPasswordController@sendEmail');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
+Route::post('/forgotten_password','ForgottenPasswordController@build');
 Route::get('/personal_account','PersonalAccountController@index');
 //Route::get('/products/tax_calculator','taxCalculatorController@index');
 Route::get('/products/tax_calculator', function () {
@@ -69,9 +72,17 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/testmodel', function () {
     $form_configuration = \App\Taxform::with('taxformdetails')->orderBy('sort', 'ASC')->get();
     //return view('products.tax_calculator.petr',['form_configuration'=>$form_configuration]);
     return view('products.tax_calculator.petr',compact('form_configuration'));
 }
 );
+
+Route::get('/profile', 'ProfileController@index')->middleware('auth');
+

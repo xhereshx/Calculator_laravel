@@ -20,7 +20,7 @@ class MortgageCalculatorController extends Controller
         $yearlyInterestPayment = floatval($request->input('interest')); // medium yearly mortgage interest rates is 2,36% 
         $monthlyInterestPayment = (($yearlyInterestPayment/100)/12);
         $maxmortgagesavings = intval($request->input('savings')) * 10;
-        $Mortgagemaxdebt = ($percentageofincome/($monthlyInterestPayment *(1+(1/(($monthlyInterestPayment  + 1) ** (floatval($request->input('loan'))*12)-1)))));
+        $Mortgagemaxdebt = ($percentageofincome/(0.002 *(1+(1/((0.002  + 1) ** (floatval($request->input('loan'))*12)-1)))));
 
         
 
@@ -31,23 +31,29 @@ class MortgageCalculatorController extends Controller
         //$MortgageCalculator->savings = $request->input('savings');
         $MortgageCalculator->savings = intval($request->input('savings')) * 10;
         $MortgageCalculator->income = $request->input('income');
-        $MortgageCalculator->age = $request->input('age');
+       
+        //using age for real payment
+        
         $MortgageCalculator->liabilities = $request->input('liabilities');
         
         $MortgageCalculator->loan = $request->input('loan');
         //$MortgageCalculator->Max_mortgage_savings = $request->input('loan');
+        //$MortgageCalculator->Max_mortgage = $Mortgagemaxdebt;
         $MortgageCalculator->Max_mortgage = min($MortgageCalculator->savings, $Mortgagemaxdebt);
-        $MortgageCalculator->Lowest_payment_time = ($MortgageCalculator->Max_mortgage / $percentageofincome);
-        $MortgageCalculator->Max_mortgage_savings = $request->input('interest');// Use it for interest input not for max mortgage savings
+        
+        $MortgageCalculator->Max_mortgage_savings = (intval($request->input('interest'))*10);// Use it for interest input not for max mortgage savings
         $MortgageCalculator->Choosent_payment_time = $request->input('loan');
         $MortgageCalculator->Choosen_payment_amount = $MortgageCalculator->Max_mortgage/(($MortgageCalculator->loan)*12);
         
         //$MortgageCalculator->liabilities = $maxmortgage;
+         //$MortgageCalculator->age = $request->input('age');
         //$MortgageCalculator->age = 
-        
+        $MortgageCalculator->age = (($MortgageCalculator->Max_mortgage)*(0.002*(1+(1/(((0.002 +1) ** (floatval($request->input('loan'))*12))-1)))));
+        //using age for real payment
         $yearlyInterestPayment = $MortgageCalculator->Max_mortgage_savings; // medium yearly mortgage interest rates is 2,36% 
         $monthlyInterestPayment = $yearlyInterestPayment/12;
-
+        $MortgageCalculator->Lowest_payment_time = ($MortgageCalculator->age/(intval($request->input('loan'))*12) );
+        //$MortgageCalculator->Lowest_payment_time = floatval($request->input('loan'))
        /*  if($MortgageCalculator->savings < $MortgageCalculator->age){
           return $MortgageCalculator->savings;
         }else{
