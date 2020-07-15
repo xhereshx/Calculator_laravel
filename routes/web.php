@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('/welcome');
+// });
 Route::get('/', function () {
     return view('/homepage.index');
 });
+
 
 Route::get('/home','HomePageController@index');
 Route::get('/about_us','About_usController@index');
@@ -62,6 +66,15 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::get('/home', 'HomeController@index');
 
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/testmodel', function () {
+    $form_configuration = \App\Taxform::with('taxformdetails')->orderBy('sort', 'ASC')->get();
+    //return view('products.tax_calculator.petr',['form_configuration'=>$form_configuration]);
+    return view('products.tax_calculator.petr',compact('form_configuration'));
+}
+);
+>>>>>>> c649e80d77082fe8b8c54136f87d3d7c890bc58c

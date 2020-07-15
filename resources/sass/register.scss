@@ -1,4 +1,4 @@
-.container-login {
+.container-register {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -8,24 +8,18 @@
   padding: 15px;
 }
 
-.wrap-login {
-  width: 960px;
+.wrap-register {
   background: rgba($color: white, $alpha: 0.5);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 150px 130px 150px 130px;
+  padding: 80px 200px 80px 200px;
 }
 
-.login-user {
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-}
 
-.login-form {
+.register-form {
   width: 290px;
   font-size: 1rem;
   font-weight: 400;
@@ -33,7 +27,7 @@
   color: black;
 }
 
-.login-form-title {
+.register-form-title {
   font-size: 25px;
   font-weight: bold;
   color: #01415f;
@@ -54,7 +48,7 @@
   margin-bottom: 10px;
 }
 
-.login-input {
+.register-input {
   font-size: 15px;
   line-height: 1.5;
   color: #01415f;
@@ -70,11 +64,12 @@
   font-size: 15px;
 }
 
-.form-login-button {
+.form-register-button {
   width: 100%;
 }
 
-.login-button {
+.register-button {
+  margin-top: 15px;
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
@@ -87,28 +82,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
   transition: background-color 0s;
 }
 
-.login-button:hover {
+.register-button:hover {
   background-color: #01415f;
   transition: 1s; 
-}
-
-.forgot-link {
-  padding-top: 12px;
-  font-size: 15px;
-  color: #01415f;
-}
-
-.register-direct {
-  padding-top: -50px;
-  font-size: 15px;
-  margin-top: 0;
-  color: black;
-}
-
-.register-link {
-  color: #01415f;
 }

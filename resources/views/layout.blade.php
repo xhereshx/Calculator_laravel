@@ -7,6 +7,7 @@
   <link rel="icon" href="images/icon.png" type="image/png" sizes="32x32">
   <link rel="stylesheet" href="{{'/css/app.css'}}">
   <title> {{ $title }} | Calculator Hub</title>
+  @yield('styles')
 </head>
 <body>
   
