@@ -19,6 +19,19 @@
 .sidebar_link {
     color: white;
     text-decoration: none;
+
+    &.my_account{
+    line-height: 30px;
+    color: #fff;
+    background-color: #fed20c;
+    border-radius: 30px;
+    padding: 5px 15px;
+    }
+
+    &.my_account:hover {
+      color: #01415f;
+      background-color: white;
+    }
 }
 
 .menu ul {

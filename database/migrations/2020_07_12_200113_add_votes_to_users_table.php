@@ -14,8 +14,8 @@ class AddVotesToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('surname');
-            $table->string('username');
+            $table->string('surname')->nullable();
+            $table->string('username')->nullable();
         });
     }
 
@@ -27,8 +27,8 @@ class AddVotesToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('surname');
-            $table->dropColumn('username');
+            $table->dropColumn('surname')->nullable();
+            $table->dropColumn('username')->nullable();
         });
     }
 }
