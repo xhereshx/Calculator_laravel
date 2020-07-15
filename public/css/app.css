@@ -182,10 +182,12 @@ html {
   background-color: #e5ab09;
   border-radius: 30px;
   padding: 5px 15px;
+  transition: 0s background-color;
 }
 .sidebar_link.my_account:hover {
   color: #01415f;
   background-color: white;
+  transition: 1s;
 }
 
 .menu ul {
@@ -340,7 +342,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 100px 130px 120px 130px;
+  padding: 80px 200px 80px 200px;
 }
 
 .register-form {
@@ -412,6 +414,59 @@ html {
 .register-button:hover {
   background-color: #01415f;
   transition: 1s;
+}
+
+.profile-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 30px;
+}
+
+.wrap-profile {
+  background: rgba(255, 255, 255, 0.5);
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  padding: 80px 130px 120px 130px;
+}
+
+.wrap-profile-info {
+  background: rgba(255, 255, 255, 0.5);
+  height: 90vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  padding: 80px 130px 120px 100px;
+  margin-left: 15px;
+}
+
+.profile-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #01415f;
+}
+
+.status {
+  color: black;
+}
+
+.img-profile {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.nav-profile-item {
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
 }
 
 .flexboxproducts {

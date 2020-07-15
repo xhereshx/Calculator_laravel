@@ -29316,13 +29316,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-__webpack_require__(/*! C:\BOOTcamp\projects\Calculator_laravel\resources\js\Calculator\index.js */"./resources/js/Calculator/index.js");
-module.exports = __webpack_require__(/*! C:\BOOTcamp\projects\Calculator_laravel\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
 __webpack_require__(/*! C:\web\bootcamp\projects\Calculator_laravel\resources\js\Calculator\index.js */"./resources/js/Calculator/index.js");
 module.exports = __webpack_require__(/*! C:\web\bootcamp\projects\Calculator_laravel\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> d4a72c4cd94b3d739825aee87c3bef2ecbc72f58
 
 
 /***/ })

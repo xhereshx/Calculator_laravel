@@ -28690,11 +28690,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\BOOTcamp\projects\Calculator_laravel\resources\js\test.js */"./resources/js/test.js");
-=======
 module.exports = __webpack_require__(/*! C:\web\bootcamp\projects\Calculator_laravel\resources\js\test.js */"./resources/js/test.js");
->>>>>>> d4a72c4cd94b3d739825aee87c3bef2ecbc72f58
 
 
 /***/ })
