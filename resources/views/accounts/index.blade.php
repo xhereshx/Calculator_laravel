@@ -17,7 +17,7 @@
             <p>User name:</p>
             <input type="text" required name="username">
             <p>Email:</p>
-            <input type="text" required name="email">
+            <input type="email" required name="email">
             <p>Password:</p>
             <input type="password" minlength="8" required name="password">
             <p>Password again:</p>

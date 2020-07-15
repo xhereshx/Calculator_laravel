@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-require('dotenv').config();
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -10,30 +10,6 @@ require('dotenv').config();
  | file for the application as well as bundling up all the JS files.
  |
  */
- 
-mix.options({
-    processCssUrls: false
-});
- 
-if (!mix.inProduction()) {
-    mix.webpackConfig({
-        devtool: 'source-map'
-    })
-    .sourceMaps()
-}
- 
-mix.react('resources/js/Calculator/index.js', 'public/js/Calculator.js')
-mix.react('resources/js/test.js', 'public/js/test.js')
-.sass('resources/sass/app.scss', 'public/css')
-//.sass('resources/sass/test.scss', 'public/test')
 
-     .browserSync({
-        host: 'localhost',
-        port: 3000,
-        proxy: {
-            target: process.env.APP_URL // Yay! Using APP_URL from the .env file!
-        }
-    });
- 
-// add versioning 
-mix.version();
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css');
