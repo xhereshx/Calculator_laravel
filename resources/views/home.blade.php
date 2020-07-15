@@ -4,13 +4,13 @@
 
 @section('content')
 <body class="main_layout">
-<div class="container">
-    <div class="row justify-content-center">
+<div class="profile-container">
+    <div class="wrap-profile">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="profile-title">{{ __('Profile') }}</div>
 
-                <div class="card-body">
+                <div class="status">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -20,10 +20,10 @@
                     {{ __('You are logged in!') }}
                 </div>
 
-                <ul class="navbar-nav ml-auto">
+                <ul class="nav-profile">
                   <!-- Authentication Links -->
                   @guest
-                      <li class="nav-item">
+                      <li class="nav-profile-item">
                           <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                       </li>
                       @if (Route::has('register'))
@@ -32,7 +32,7 @@
                           </li>
                       @endif
                   @else
-                      <li class="nav-item dropdown">
+                      <li class="nav-profile-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>
                           </a>
@@ -51,9 +51,18 @@
                       </li>
                   @endguest
               </ul>
+
+              <img class="img-profile" src="/images/user.png" alt="user"/>
               
             </div>
         </div>
+    </div>
+    <div class="wrap-profile-info">
+      <div class="profile-title">Mortgage Calculator Result</div>
+    </div>
+
+    <div class="wrap-profile-info">
+      <div class="profile-title">Tax Calculator Result</div>
     </div>
 </div>
 </body>
