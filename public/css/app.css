@@ -469,6 +469,12 @@ html {
   color: black;
 }
 
+.mortgage-profile {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
 .flexboxproducts {
   display: flex;
   padding-left: 5rem;

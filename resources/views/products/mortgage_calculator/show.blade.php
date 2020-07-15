@@ -1,8 +1,9 @@
-<head><link rel="stylesheet" href="{{'/css/app.css'}}">
-</head>
-<body class="backgroundimage">
+@extends('layout', [
+  'title' => 'Result'
+])
 
-
+@section('content')
+<body class='main_layout'>
 <div class="flexboxproductpage">
 <div class="title"><h1 class="test">Your mortgage can be:</h1>
 <p>{{$MortgageCalculator->Max_mortgage}} CZK</p>
@@ -23,4 +24,5 @@
 </div>
 </div>
 </body>
+@endsection
 

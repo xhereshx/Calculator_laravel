@@ -69,3 +69,5 @@ Route::get('/testmodel', function () {
     return view('products.tax_calculator.petr',compact('form_configuration'));
 }
 );
+
+Route::get('/profile', 'ProfileController@index')->middleware('auth');
