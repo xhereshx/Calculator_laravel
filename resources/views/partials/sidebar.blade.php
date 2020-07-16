@@ -9,7 +9,7 @@
         <li><a class="sidebar_link" href="{{ url('/')}}">Home</a></li>
         <li><a class="sidebar_link" href="{{ url('/products')}}">Products</a></li>
         <li><a class="sidebar_link" href="{{ url('/about_us')}}">About Us</a></li>
-        <li><a class="sidebar_link my_account" href="{{ url('/login')}}">My Account</a></li>
+        <li><a class="sidebar_link my_account" href="{{ url('/profile')}}">My Account</a></li>
       </ul>
     </div>
 

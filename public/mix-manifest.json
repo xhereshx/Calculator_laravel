@@ -1,17 +1,8 @@
 {
-<<<<<<< HEAD
-    "/js/Calculator.js": "/js/Calculator.js?id=5c40b9f096b8d6fd69c6",
-    "/css/app.css": "/css/app.css?id=19aa9bc9c4f3a966e92a",
-    "/js/Calculator.js.map": "/js/Calculator.js.map?id=b40f7ce6d8e44ad09bf5",
-    "/css/app.css.map": "/css/app.css.map?id=0914d561e8d567fbc17d",
-    "/js/test.js": "/js/test.js?id=e4bc8d6ab07b899d1790",
-    "/js/test.js.map": "/js/test.js.map?id=adb4af8e7510a559565f"
-=======
     "/js/Calculator.js": "/js/Calculator.js?id=e0748577f5fb44a0c43f",
-    "/css/app.css": "/css/app.css?id=e187174a263c9b2b2480",
+    "/css/app.css": "/css/app.css?id=2cf7dbed004bae6897b5",
     "/js/Calculator.js.map": "/js/Calculator.js.map?id=1f77390821a33a1b24b3",
-    "/css/app.css.map": "/css/app.css.map?id=d622b49d9157a59699bb",
-    "/js/test.js": "/js/test.js?id=61ea48eb3108bf3d14bd",
-    "/js/test.js.map": "/js/test.js.map?id=a75a09fac9822991c7c6"
->>>>>>> c649e80d77082fe8b8c54136f87d3d7c890bc58c
+    "/css/app.css.map": "/css/app.css.map?id=aeb4c77e36f36e8ed6af",
+    "/js/test.js": "/js/test.js?id=70e46328feec5048c293",
+    "/js/test.js.map": "/js/test.js.map?id=adb4af8e7510a559565f"
 }

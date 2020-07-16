@@ -8,7 +8,7 @@
 
     <section class="flexbox">
     <div class="item">
-    <p><img class="founders" src="https://media-exp1.licdn.com/dms/image/C5103AQHpAyc_7nV9jg/profile-displayphoto-shrink_800_800/0?e=1599091200&v=beta&t=aeQRX9jxaKmumzcgICumAGydpRky5u0pzH37h7W0siQ" alt="Hazmin Firdaus Chik"></p>
+    <p><img class="founders" src="https://media-exp1.licdn.com/dms/image/C5603AQHObDtvjJvAwg/profile-displayphoto-shrink_200_200/0?e=1600300800&v=beta&t=gyS5K8KQnKe9QgyTPr1Im4oFyTt3SwF3DIhzunE8SXQ" alt="Hazmin Firdaus Chik"></p>
     <h1 class="textColor">Hazmin Firdaus Chik</h1>
     <p class="text textColor">I decided to join this bootcamp to challenge myself and change my career. It's an amazing experience to learn from the experts at the bootcamp.</p>
     </div>

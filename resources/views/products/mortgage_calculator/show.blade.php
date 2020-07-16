@@ -1,10 +1,12 @@
 @extends('layout', [
-  'title' => 'Personal Account'
+  'title' => 'Result'
 ])
 @section('content')    
 <body class="main_layout">
 
 
+@section('content')
+<body class='main_layout'>
 <div class="flexboxproductpage">
 <div class="title"><h1 class="test">Your mortgage can be:</h1>
 <p>{{$MortgageCalculator->Max_mortgage}} CZK</p>

@@ -16,7 +16,7 @@
 
   <div>
     <button class="home__button--calculate">
-      <a class="home__link--calculate" href="{{ url('/products')}}">Checkout Our Calculators!</a>
+      <a class="home__link--calculate" href="{{ url('/products')}}">Explore Our Calculators!</a>
     </button>
   </div>
 
