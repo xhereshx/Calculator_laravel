@@ -80,8 +80,7 @@
         <div class="register-direct">
           <span>Not registered?
             <a class="register-link" href="{{ url('/register')}}">Create your account here</a>
-        </span>
-        
+          </span>
         </div>
 
     </div>

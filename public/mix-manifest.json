@@ -1,6 +1,4 @@
 {
-    "/js/Calculator.js": "/js/Calculator.js?id=8127e11cf86338faa350",
-    "/css/app.css": "/css/app.css?id=2cf7dbed004bae6897b5",
-    "/js/Calculator.js.map": "/js/Calculator.js.map?id=1f77390821a33a1b24b3",
-    "/css/app.css.map": "/css/app.css.map?id=1e0d53fb9d59d9ba48a8"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css"
 }
