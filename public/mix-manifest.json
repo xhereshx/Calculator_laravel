@@ -1,8 +1,4 @@
 {
-    "/js/Calculator.js": "/js/Calculator.js?id=e0748577f5fb44a0c43f",
-    "/css/app.css": "/css/app.css?id=2cf7dbed004bae6897b5",
-    "/js/Calculator.js.map": "/js/Calculator.js.map?id=1f77390821a33a1b24b3",
-    "/css/app.css.map": "/css/app.css.map?id=aeb4c77e36f36e8ed6af",
-    "/js/test.js": "/js/test.js?id=70e46328feec5048c293",
-    "/js/test.js.map": "/js/test.js.map?id=adb4af8e7510a559565f"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css"
 }
