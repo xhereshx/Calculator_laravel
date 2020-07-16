@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MortgageCalculator;
+use User;
 
 class MortgageCalculatorController extends Controller
 {
@@ -32,7 +33,7 @@ class MortgageCalculatorController extends Controller
         $MortgageCalculator->Max_mortgage = min($MortgageCalculator->savings, $Mortgagemaxdebt);
         
         $MortgageCalculator->Max_mortgage_savings = (floatval($request->input('interest'))*10); // Use it for interest input not ?
-       
+        $MortgageCalculator->user_id = \Auth::id();
         $MortgageCalculator->Choosent_payment_time = $request->input('loan');
         $MortgageCalculator->Choosen_payment_amount = $MortgageCalculator->Max_mortgage/(($MortgageCalculator->loan)*12);
         

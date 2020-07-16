@@ -62,8 +62,10 @@
         Mortgage Calculator Result
         <div class="mortgage-profile">
           <ul>
-              <li><a href="{{ url('/products/mortgage_calculator/result/204')}}">Result 1</a></li>
-              <li><a href="{{ url('/products/mortgage_calculator/result/207')}}">Result 2</a></li>
+              @foreach (auth()->user()->mortgagecalculators as $item)
+              <li><a href="{{ url('/products/mortgage_calculator/result/' .  $item->id)}}">Result{{$item->id}}</a></li>
+              @endforeach
+
           </ul>
         </div>
       </div>
