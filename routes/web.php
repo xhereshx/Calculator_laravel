@@ -86,3 +86,4 @@ Route::get('/testmodel', function () {
 
 Route::get('/profile', 'ProfileController@index')->middleware('auth');
 
+
