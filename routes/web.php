@@ -30,7 +30,13 @@ Route::get('/send_email', 'ForgottenPasswordController@sendEmail');
 Route::get('/forgotten_password','ForgottenPasswordController@index');
 Route::post('/forgotten_password','ForgottenPasswordController@build');
 Route::get('/personal_account','PersonalAccountController@index');
-Route::get('/products/tax_calculator','taxCalculatorController@index');
+//Route::get('/products/tax_calculator','taxCalculatorController@index');
+Route::get('/products/tax_calculator', function () {
+    $form_configuration = \App\Taxform::with('taxformdetails')->orderBy('sort', 'ASC')->get();
+    return view('products.tax_calculator.index',compact('form_configuration'));
+}
+);
+
 
 Route::get('/products/mortgage_calculator','mortgageCalculatorController@index')->middleware('auth');
 //Route::get('/products/mortgage_calculator/test/{id}','mortgageCalculatorController@show');

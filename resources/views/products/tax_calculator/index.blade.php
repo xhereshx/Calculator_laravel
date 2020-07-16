@@ -1,14 +1,17 @@
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs"><head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta http-equiv="Content-Language" content="cs">
-	<title>Tax Calculator USA 2018</title>
-	<style>
-		body {
+@extends('layout', [
+    'title' => 'Tax calculator form TEST'
+])
+
+@section('styles')
+<style>
+		.bodyTaxCalc {
 			background: #CCCCCC;
 			font-family: sans-serif, serif;
-			padding: 20px 20px 0 20px;
+            padding: 20px 20px 0 20px;
+            border: red solid 1px;
+            width: 793px;
 		}
-		.page {
+		.pageTaxCalc {
 			position: relative;
 			border: 1px solid #666;
 			background: white;
@@ -18,218 +21,274 @@
 			overflow: hidden;
 			-webkit-box-shadow: 3px 3px 8px #666;
 			-moz-box-shadow: 3px 3px 8px #666;
-			box-shadow: 3px 3px 8px #666;
+            box-shadow: 3px 3px 8px #666;
+            border: #4CAF50;
 		}
-		.page .bg {
+		.pageTaxCalc .bg {
 			width: 100%
 		}
-		.print {
+		.calcOverWin {
 			position: absolute;
-			position: fixed;
-			top: 30%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+			top: 20%;
 			left: 10%;
 			width: 80%;
-			height: 40%;
+			height: 70%;
 			padding: 10px;
             z-index: 10;
             background-color: rgba(255,255,255, 0.9);
-		}
-		.print2 {
-			top: 180px;
-			text-align: center;
-		}
-		.print a {
-			display: block;
-			font-size: 18px;
-			color: black;
-			clear: left;
-		}
-		.print a img {
-			float: left;
-			margin: 0 10px 2px 0
-		}
-		.print a em {
-			display: block;
-			margin: 0 0 0 42px;
-			font-size: 10px;
-			text-decoration: none;
-		}
-		#g, #s, #e {
-			display: none;
-			text-align: center;
-			font-size: 12px;
-		}
-		#g img {
-			margin: 10px;
-			width: 150px;
         }
+		#g, #s, #e {
+			text-align: center;
+			font-size: 20px;
+		}
+
         /* Chrome, Safari, Edge, Opera */
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+        background-color:lightgray;
         }
 
         /* Firefox */
         input[type=number] {
         -moz-appearance: textfield;
-
+        background-color: lightgray;
         }
+        .calculateTaxReturn{
+            background-color: lightgray;
+        }
+/*  pricing */
+
+                        * {
+                box-sizing: border-box;
+                }
+
+            .columnsTaxCalc {
+            float: left;
+            width: 33.3%;
+            padding: 8px;
+            border: #4CAF50 1px solid;
+            }
+
+            .priceTaxCalc {
+            list-style-type: none;
+            border: 1px solid #eee;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            }
+
+            .priceTaxCalc:hover {
+            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+            }
+
+            .priceTaxCalc .headerTaxCalc {
+            background-color: #111;
+            color: white;
+            font-size: 25px;
+            }
+
+            .priceTaxCalc li {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            text-align: center;
+            }
+
+            .priceTaxCalc .greyTaxCalc {
+            background-color: #eee;
+            font-size: 20px;
+            color: black;
+            }
+            /* The "Sign Up" button */
+            .buttonTaxCalc {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            }
+            .textTaxCalc {
+                color: black;
+            }
+
+            /* Change the width of the three columns to 100%
+            (to stack horizontally on small screens) */
+            @media only screen and (max-width: 600px) {
+            .columnsTaxCalc {
+                width: 100%;
+            }
+            }
+.printMenuCalculator {
+			position: absolute;
+			position: fixed;
+			top: 5%;
+			right: 2%;
+			width: 20%;
+			height: 30%;
+			padding: 10px;
+            z-index: 10;
+            background-color: rgba(255,255,255, 0.9);
+            border: red solid 1px;
+		}
+		#p img {
+			margin: 10px;
+			width: 50px;
+        }
+
 	</style>
-</head>
-    <form>
-    </div>
-	<div class="page print">
-		<a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="/graphics/images/print_32.png"> Print<em>PDF file for print will be downloaded.</em></a><br>
-		<a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="d"><img src="/graphics/images/pdf_32.png"> Save as PDF<em>Adobe Acrobat or some program which can handle PDF files.</em></a>
-		<div id="g">Generating PDF. It can take a while.<br><img src="/graphics/images/ajax-loader-bar.gif"></div>
-		<div id="s"><img src="/graphics/images/success.png"><br><br>PDF was successfully generated.<br>Thank you for downloading.</div>
-		<div id="e"><img src="/graphics/images/error.png"><br><br>Oops, an error occured.<br>We are informed.<br>Please try again later.</div>
-	</div>
-	<div class="page"><img src="" class="bg" style="width: 100%">
-</div><br><br>
+@endsection
+<?php 
+$form_configuration=json_decode(json_encode($form_configuration,false));
+//var_dump($form_configuration);
+//dd($form_configuration);
+// print_r($form_configuration[0]->name);
+?>
+@section('content')
+<div class="">
+    
+            @if (Auth::check())
+            
+                    <div class="pageTaxCalc printMenuCalculator">
+                        <ol>
+                            <li>Fill all grey fields</li>
+                            <li>Print pdf<br>
+                                <a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="http://trevellasmanorfarmcampsite.co.uk/wp-content/uploads/2017/08/pdf-printer-icon.png"><br><em>PDF file for print will be downloaded.</em></a><br>
+                            </li>
+                        </ol>
+                    </div>    
+            @else
+                    <div class="pageTaxCalc calcOverWin">
+                        <div class="calcOverWinMessage">
+                            <div>
+                                <div id="s"><br><br>We are happy to have you here, but it seems you are not registered.<br>Please select the right plan.<br><br></div>
+                            </div>    
+                            <div>
+                                <!-- menu -->
+                                <div class="columnsTaxCalc">
+                                    <ul class="priceTaxCalc">
+                                        <li class="headerTaxCalc">Basic</li>
+                                        <li class="greyTaxCalc">$ 0 / year</li>
+                                        <li class="textTaxCalc">Free calculation up to $ 6000</li>
+                                        <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="columnsTaxCalc">
+                                        <ul class="priceTaxCalc">
+                                            <li class="headerTaxCalc" style="background-color:#4CAF50">Pro</li>
+                                            <li class="greyTaxCalc">$ 24.99 / year</li>
+                                            <li class="textTaxCalc">Print pdf</li>
+                                            <li class="textTaxCalc">Save history</li>
+                                            <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="columnsTaxCalc">
+                                        <ul class="priceTaxCalc">
+                                            <li class="headerTaxCalc">Premium</li>
+                                            <li class="greyTaxCalc">$ 49.99 / year</li>
+                                            <li class="textTaxCalc">Print pdf</li>
+                                            <li class="textTaxCalc">Save history</li>
+                                            <li class="textTaxCalc">Online Support</li>
+                                            <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+            @endif
 
+        @foreach ($form_configuration as $page)
+                    <div class="pageTaxCalc">
+                    {{--<img src="http://www.securetax.eu/00BootCamp/{{ $page->bg_image }}" class="bg" style="width: {{ $page ->page_width }}px height: {{ $page ->page_height }}px ">--}}
+                    <img src="http://www.securetax.eu/00BootCamp/{{ $page->bg_image }}" class="bg" style="width: 793px">
+                        @foreach ($page->taxformdetails as $field_uid => $field)
+                        @if($field->htmltag == "text")
+                            <input class="calculateTaxReturn" type="text"
+                        @elseif($field->htmltag == "number")
+                            <input type="number" onChange="calculate()"
+                        @elseif($field->htmltag == "checkbox")
+                            <input type="checkbox"    
+                        @else
+                            <div
+                        @endif
+                        id="{{ $field->uid }}"
+                        style="position: absolute; 
+                               left: {{ ($field->x)*(108/250) }}px; 
+                               top: {{ ($field->y)*(108/250) }}px; 
+                               font-size: {{ ($field->height)*(108/250) }}px;
+                               width: {{ ($field->size)*(108/250) }}px;
+                               text-align: {{ $field->alignment }};
+                               color: #{{ $field->color }};
+                               border:none;"
+                        name="{{ $field->fieldname }}"
+                        placeholder="{{ $field->placeholder }}"
+                        @if($field->htmltag == "text")
+                        >
+                        @elseif($field->htmltag == "number")
+                        >
+                        @elseif($field->htmltag == "checkbox")
+                        >    
+                        @else
+                        >{{ $field->placeholder }}</div>
+                        @endif
+                    @endforeach
+                </div>
+                @endforeach
 
-<div class="page"><img src="" class="bg" style="width: 793px">
-<div style="position: absolute;left: 56px;top: 736px;font-size: 14px;width: 254px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 57px;top: 763px;font-size: 14px;width: 254px;text-align: left;color: #000">Sweden</div>
-<div style="position: absolute;left: 478px;top: 54px;font-size: 14px;width: 290px;text-align: left;color: #000">Address: </div>
-<div style="position: absolute;left: 684px;top: 683px;font-size: 14px;width: 64px;text-align: left;color: #000">Stamp</div>
-<div style="position: absolute;left: 515px;top: 75px;font-size: 14px;width: 254px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 444px;top: 967px;font-size: 14px;width: 304px;text-align: left;color: #000">UNITED STATES</div>
-<div style="position: absolute;left: 55px;top: 683px;font-size: 14px;width: 254px;text-align: left;color: #000">Lukas Hogberg</div>
-<div style="position: absolute;left: 443px;top: 940px;font-size: 14px;width: 304px;text-align: left;color: #000">TX 73301-0215 Austin</div>
-<div style="position: absolute;left: 55px;top: 710px;font-size: 14px;width: 254px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 515px;top: 98px;font-size: 14px;width: 254px;text-align: left;color: #000"> Sweden</div>
-<div style="position: absolute;left: 55px;top: 373px;font-size: 16px;width: 452px;text-align: left;color: #000">PLEASE FOLLOW THESE STEPS:</div>
-<div style="position: absolute;left: 480px;top: 171px;font-size: 14px;width: 141px;text-align: left;color: #000">TaxID: 2177782</div>
-<div style="position: absolute;left: 478px;top: 31px;font-size: 14px;width: 290px;text-align: left;color: #000">Name:Lukas Hogberg</div>
-<div style="position: absolute;left: 480px;top: 193px;font-size: 14px;width: 141px;text-align: left;color: #000">DID: 0</div>
-<div style="position: absolute;left: 480px;top: 147px;font-size: 14px;width: 290px;text-align: left;color: #000">Tax year:2018 </div>
-<div style="position: absolute;left: 58px;top: 263px;font-size: 14px;width: 700px;text-align: left;color: #000">Dear client,<br>we appreciate that you used the Dendax World Tax Services. In this file you will find all necessary documents for applying for your tax refund from USA.
-To ensure high protection of your tax information your documents are protected with barcode. This code contains Important information about your case. 
-The barcode and your unique TaxID are very important for correct filing of your tax return.</div>
-<div style="position: absolute;left: 445px;top: 885px;font-size: 14px;width: 304px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 480px;top: 123px;font-size: 14px;width: 290px;text-align: left;color: #000">Tax Country:USA </div>
-<div style="position: absolute;left: 56px;top: 395px;font-size: 14px;width: 700px;text-align: left;color: #000">1. Print all documents in this file<br> 
-2. Put your signature next to '@' (on pages )<br>
-3. Check your unique Tax ID: 2177782 to be correctly printed on each document (in the left upper corner). If this number is wrong or missing please, contact us imediately!<br>
-<br>4. Make sure that your mailing address is printed correctly on all documents.<br>5. Enclose ONLY copies of the folowing documents to the envelope: <br>&lt;<attach_docs>&gt;<br>6. Post all documents to the address shown on the envelope below. If the posting address is not the Dendax address (you do not have Posting Documents Service), visit your personal account and insert the posting date in STEP 4.</attach_docs></div>
-<div style="position: absolute;left: 443px;top: 820px;font-size: 14px;width: 304px;text-align: left;color: #000">FD Internal Revenue Service Center</div>
-<div style="position: absolute;left: 71px;top: 868px;font-size: 40px;width: 360px;text-align: left;color: #000">Example envelope</div>
-<div style="position: absolute;left: 57px;top: 217px;font-size: 28px;width: 700px;text-align: center;color: #000">TAX return for Country/State: USA TX 73301-0215</div>
-<div style="position: absolute;left: 424px;top: 0px;font-size: 9px;width: 47px;text-align: left;color: #000">2177782<br>YYccc00PRU01a</div>
-<div style="position: absolute;left: 518px;top: -5px;font-size: 28px;width: 141px;text-align: right;color: #000"><span style="font-family: barcode">*2177782180037*</span></div>
-</div><br><br>
+</div>    
+    <script>
+        document.querySelector('[name="%FDitem8%"]').addEventListener('change', () => {
+        calculate();
+        });
 
-<div class="page"><img src="http://www.securetax.eu/00BootCamp/18usaFDNRM01b.png" class="bg" style="width: 793px">
-<div style="position: absolute;left: 125px;top: 108px;font-size: 13px;width: 227px;text-align: left;color: #000">Lukas</div>
-<input type="number" id="item1" style="position: absolute;left: 651px;top: 382px;font-size: 13px;width: 83px;text-align: right;color: #000;border:none;" placeholder="0.00" ></>
-<input type="number" id="item2" style="position: absolute;left: 636px;top: 663px;font-size: 13px;width: 97px;text-align: right;color: #000;border:none;" placeholder="0.00" ></>
-<div style="position: absolute;left: 485px;top: 233px;font-size: 13px;width: 84px;text-align: left;color: #000"></div>
-<input type="number" id="item3" style="position: absolute;left: 623px;top: 896px;font-size: 13px;width: 110px;text-align: right;color: #000;border:none;" placeholder="0.00" ></>
-<div style="position: absolute;left: 485px;top: 219px;font-size: 13px;width: 84px;text-align: left;color: rgb(172, 164, 164)"></div>
-<div style="position: absolute;left: 589px;top: 109px;font-size: 13px;width: 175px;text-align: center;color: #000"></div>
-<div style="position: absolute;left: 623px;top: 866px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 144px;top: 136px;font-size: 17px;width: 466px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 357px;top: 108px;font-size: 13px;width: 220px;text-align: left;color: #000">Hogberg</div>
-<div style="position: absolute;left: 149px;top: 233px;font-size: 13px;width: 84px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 149px;top: 218px;font-size: 13px;width: 84px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 503px;top: 631px;font-size: 13px;width: 91px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 496px;top: 723px;font-size: 13px;width: 97px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 143px;top: 200px;font-size: 15px;width: 298px;text-align: left;color: #000">Sweden</div>
-<div style="position: absolute;left: 655px;top: 199px;font-size: 15px;width: 110px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 149px;top: 250px;font-size: 13px;width: 84px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 143px;top: 168px;font-size: 15px;width: 628px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 623px;top: 911px;font-size: 13px;width: 110px;text-align: right;color: #000">4920.00</div>
-<div style="position: absolute;left: 650px;top: 123px;font-size: 17px;width: 26px;text-align: right;color: #000">X</div>
-<div style="position: absolute;left: 389px;top: 0px;font-size: 9px;width: 43px;text-align: left;color: #000">2177782<br>18usaFDNRM01b</div>
-<div style="position: absolute;left: 475px;top: -4px;font-size: 26px;width: 130px;text-align: right;color: #000"><span style="font-family: barcode">*21777821812074*</span></div>
-</div><br><br>
+function calculate(){
+    const FDitem8 = document.querySelector('[name="%FDitem8%"]').value;//
+    let FDitem23 = FDitem8;
+    document.querySelector("[name='%FDitem23%']").innerHTML = Math.floor(parseFloat(FDitem23)).toFixed(2);
+    const FDitem35 = FDitem23;
+    document.querySelector("[name='%FDitem35%']").innerHTML = Math.floor(parseFloat(FDitem35)).toFixed(2);
+    const FDitem36 = FDitem35;
+    document.querySelector("[name='%FDitem36%']").innerHTML = Math.floor(parseFloat(FDitem36)).toFixed(2);
+    const FDitemized = FDitem36;
+    document.querySelector("[name='%FDitemized%']").innerHTML = Math.floor(parseFloat(FDitemized)).toFixed(2);
+    //************FDpage2*****************
+    const FDitem40 = FDitemized;
+    document.querySelector("[name='%FDitem40%']").innerHTML = Math.floor(parseFloat(FDitem40)).toFixed(2);
+    const FDtaxablewage = FDitem40;
+    document.querySelector("[name='%FDtaxablewage%']").innerHTML = Math.floor(parseFloat(FDtaxablewage)).toFixed(2);
+    const FDtax = FDtaxablewage*0.15;
+    document.querySelector("[name='%FDtax%']").innerHTML = Math.floor(parseFloat(FDtax)).toFixed(2);
+    const FDitem45 = FDtax;
+    document.querySelector("[name='%FDitem45%']").innerHTML = Math.floor(parseFloat(FDitem45)).toFixed(2);
+    const FDitem53 = FDitem45;
+    document.querySelector("[name='%FDitem53%']").innerHTML = Math.floor(parseFloat(FDitem53)).toFixed(2);
+    const FDitem61 = FDitem53;
+    document.querySelector("[name='%FDitem61%']").innerHTML = Math.floor(parseFloat(FDitem61)).toFixed(2);
+    const FDitem62a = document.querySelector('[name="%FDitem62a%"]').value;
+    const FDitem71 = FDitem62a;
+    document.querySelector("[name='%FDitem71%']").innerHTML = Math.floor(parseFloat(FDitem71)).toFixed(2);
+    if (FDitem71>FDitem61){
+        const FDitem72=FDitem71-FDitem61;
+        document.querySelector("[name='%FDitem72%']").innerHTML = Math.floor(parseFloat(FDitem72)).toFixed(2);
+        const FDitem75=0;
+        document.querySelector("[name='%FDitem75%']").innerHTML = Math.floor(parseFloat(FDitem75)).toFixed(2);
+    }else{
+        const FDitem72=0;
+        document.querySelector("[name='%FDitem72%']").innerHTML = Math.floor(parseFloat(FDitem72)).toFixed(2);
+        const FDitem75=FDitem61-FDitem71;
+        document.querySelector("[name='%FDitem75%']").innerHTML = Math.floor(parseFloat(FDitem75)).toFixed(2);
+    }
+    
+}
+</script>
 
-<div class="page"><img src="http://www.securetax.eu/00BootCamp/18usaFDNRM02b.png" class="bg" style="width: 793px">
-<div style="position: absolute;left: 664px;top: 912px;font-size: 13px;width: 130px;text-align: left;color: #000">CPA_ptin</div>
-<div style="position: absolute;left: 581px;top: 932px;font-size: 13px;width: 130px;text-align: left;color: #000">CPA_ein</div>
-<div style="position: absolute;left: 623px;top: 670px;font-size: 13px;width: 110px;text-align: right;color: #000">11702.90</div>
-<div style="position: absolute;left: 623px;top: 656px;font-size: 13px;width: 110px;text-align: right;color: #000">11702.90</div>
-<div style="position: absolute;left: 428px;top: 881px;font-size: 13px;width: 130px;text-align: left;color: #000">Training</div>
-<div style="position: absolute;left: 624px;top: 764px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 293px;top: 900px;font-size: 30px;width: 71px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 578px;top: 793px;font-size: 13px;width: 49px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 622px;top: 64px;font-size: 13px;width: 110px;text-align: right;color: #000">77080.00</div>
-<div style="position: absolute;left: 213px;top: 814px;font-size: 13px;width: 130px;text-align: left;color: #000">Petr Jandal</div>
-<div style="position: absolute;left: 371px;top: 900px;font-size: 30px;width: 175px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 622px;top: 79px;font-size: 13px;width: 110px;text-align: right;color: #000">12897.10</div>
-<div style="position: absolute;left: 530px;top: 916px;font-size: 13px;width: 84px;text-align: left;color: #000">2019-04-12</div>
-<div style="position: absolute;left: 127px;top: 922px;font-size: 9px;width: 188px;text-align: left;color: #000">CPA_name</div>
-<div style="position: absolute;left: 622px;top: 125px;font-size: 13px;width: 110px;text-align: right;color: #000">12897.10</div>
-<div style="position: absolute;left: 206px;top: 848px;font-size: 30px;width: 175px;text-align: left;color: #000"></div>
-<div style="position: absolute;left: 206px;top: 890px;font-size: 9px;width: 130px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 229px;top: 683px;font-size: 15px;width: 123px;text-align: left;color: #000">031100209</div>
-<div style="position: absolute;left: 466px;top: 682px;font-size: 17px;width: 49px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 495px;top: 681px;font-size: 17px;width: 65px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 334px;top: 883px;font-size: 13px;width: 84px;text-align: left;color: #000">2019-04-12</div>
-<div style="position: absolute;left: 657px;top: 816px;font-size: 13px;width: 91px;text-align: center;color: #000">77782</div>
-<div style="position: absolute;left: 622px;top: 48px;font-size: 13px;width: 110px;text-align: right;color: #000">4920.00</div>
-<div style="position: absolute;left: 229px;top: 699px;font-size: 15px;width: 230px;text-align: left;color: #000">account_no</div>
-<div style="position: absolute;left: 127px;top: 860px;font-size: 39px;width: 78px;text-align: left;color: #F00">@</div>
-<div style="position: absolute;left: 481px;top: 454px;font-size: 13px;width: 110px;text-align: right;color: #000">24600.00</div>
-<div style="position: absolute;left: 623px;top: 422px;font-size: 13px;width: 110px;text-align: right;color: #000">12897.10</div>
-<div style="position: absolute;left: 623px;top: 641px;font-size: 13px;width: 110px;text-align: right;color: #000">24600.00</div>
-<div style="position: absolute;left: 655px;top: 887px;font-size: 13px;width: 78px;text-align: center;color: #000">0</div>
-<div style="position: absolute;left: 581px;top: 950px;font-size: 13px;width: 130px;text-align: left;color: #000"> </div>
-<div style="position: absolute;left: 621px;top: 265px;font-size: 13px;width: 110px;text-align: right;color: #000">12897.10</div>
-<div style="position: absolute;left: 398px;top: 814px;font-size: 13px;width: 130px;text-align: left;color: #000">(718) 673 6179</div>
-<div style="position: absolute;left: 198px;top: 937px;font-size: 11px;width: 311px;text-align: left;color: #000">CPA_name; CPA_street; CPA_city; CPA_country</div>
-<div style="position: absolute;left: 481px;top: 516px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 389px;top: 0px;font-size: 9px;width: 43px;text-align: left;color: #000">2177782<br>18usaFDNRM02b</div>
-<div style="position: absolute;left: 475px;top: -4px;font-size: 26px;width: 130px;text-align: right;color: #000"><span style="font-family: barcode">*21777821812075*</span></div>
-</div><br><br>
-
-<div class="page"><img src="http://www.securetax.eu/00BootCamp/18usaFDNRM03b.png" class="bg" style="width: 793px">
-<div style="position: absolute;left: 308px;top: 421px;font-size: 13px;width: 292px;text-align: right;color: #000">Tax Preparatin fee</div>
-<div style="position: absolute;left: 482px;top: 203px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 623px;top: 173px;font-size: 13px;width: 110px;text-align: right;color: #000">4920.00</div>
-<div style="position: absolute;left: 622px;top: 437px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 622px;top: 390px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 622px;top: 545px;font-size: 13px;width: 110px;text-align: right;color: #000">4920.00</div>
-<div style="position: absolute;left: 482px;top: 142px;font-size: 13px;width: 110px;text-align: right;color: #000">4920.00</div>
-<div style="position: absolute;left: 622px;top: 419px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 482px;top: 282px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 308px;top: 437px;font-size: 13px;width: 292px;text-align: right;color: #000">vvv</div>
-<div style="position: absolute;left: 622px;top: 313px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 625px;top: 498px;font-size: 13px;width: 110px;text-align: right;color: #000">0.00</div>
-<div style="position: absolute;left: 389px;top: 0px;font-size: 9px;width: 43px;text-align: left;color: #000">2177782<br>18usaFDNRM03b</div>
-<div style="position: absolute;left: 475px;top: -4px;font-size: 26px;width: 130px;text-align: right;color: #000"><span style="font-family: barcode">*21777821812076*</span></div>
-</div><br><br>
-
-<div class="page"><img src="http://www.securetax.eu/00BootCamp/18usaFDNRM04b.png" class="bg" style="width: 793px">
-<div style="position: absolute;left: 701px;top: 451px;font-size: 13px;width: 45px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 701px;top: 498px;font-size: 13px;width: 45px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 702px;top: 485px;font-size: 13px;width: 45px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 418px;top: 629px;font-size: 13px;width: 130px;text-align: right;color: #000">N/A</div>
-<div style="position: absolute;left: 90px;top: 630px;font-size: 13px;width: 130px;text-align: right;color: #000"></div>
-<div style="position: absolute;left: 422px;top: 436px;font-size: 13px;width: 130px;text-align: right;color: #000">------------</div>
-<div style="position: absolute;left: 289px;top: 409px;font-size: 13px;width: 65px;text-align: right;color: #000">0</div>
-<div style="position: absolute;left: 669px;top: 141px;font-size: 13px;width: 45px;text-align: right;color: #000">X</div>
-<div style="position: absolute;left: 701px;top: 732px;font-size: 13px;width: 26px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 619px;top: 630px;font-size: 13px;width: 45px;text-align: right;color: #000"></div>
-<div style="position: absolute;left: 669px;top: 156px;font-size: 13px;width: 45px;text-align: right;color: #000">X</div>
-<div style="position: absolute;left: 121px;top: 407px;font-size: 13px;width: 65px;text-align: center;color: #000">0</div>
-<div style="position: absolute;left: 701px;top: 109px;font-size: 13px;width: 45px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 566px;top: 420px;font-size: 13px;width: 104px;text-align: right;color: #000"> </div>
-<div style="position: absolute;left: 364px;top: 275px;font-size: 13px;width: 130px;text-align: right;color: #000">J1</div>
-<div style="position: absolute;left: 702px;top: 514px;font-size: 13px;width: 45px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 486px;top: 406px;font-size: 13px;width: 65px;text-align: right;color: #000">0</div>
-<div style="position: absolute;left: 237px;top: 328px;font-size: 13px;width: 78px;text-align: center;color: #000">0000-00-00</div>
-<div style="position: absolute;left: 666px;top: 219px;font-size: 13px;width: 45px;text-align: right;color: #000">X</div>
-<div style="position: absolute;left: 701px;top: 417px;font-size: 13px;width: 97px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 492px;top: 79px;font-size: 13px;width: 136px;text-align: left;color: #000">Sweden</div>
-<div style="position: absolute;left: 119px;top: 325px;font-size: 13px;width: 91px;text-align: center;color: #000"> 0000-00-00</div>
-<div style="position: absolute;left: 702px;top: 746px;font-size: 13px;width: 26px;text-align: left;color: #000">X</div>
-<div style="position: absolute;left: 494px;top: 92px;font-size: 13px;width: 130px;text-align: left;color: #000">Sweden</div>
-<div style="position: absolute;left: 389px;top: 0px;font-size: 9px;width: 43px;text-align: left;color: #000">2177782<br>18usaFDNRM04b</div>
-<div style="position: absolute;left: 475px;top: -4px;font-size: 26px;width: 130px;text-align: right;color: #000"><span style="font-family: barcode">*21777821811826*</span></div>
-</div><br><br>
-</form>
-</body></html>
+@endsection

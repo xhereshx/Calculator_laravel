@@ -4,10 +4,12 @@
 
 @section('styles')
 <style>
-		body {
+		.bodyTaxCalc {
 			background: #CCCCCC;
 			font-family: sans-serif, serif;
-			padding: 20px 20px 0 20px;
+            padding: 20px 20px 0 20px;
+            border: red solid 1px;
+            width: 793px;
 		}
 		.pageTaxCalc {
 			position: relative;
@@ -19,7 +21,8 @@
 			overflow: hidden;
 			-webkit-box-shadow: 3px 3px 8px #666;
 			-moz-box-shadow: 3px 3px 8px #666;
-			box-shadow: 3px 3px 8px #666;
+            box-shadow: 3px 3px 8px #666;
+            border: #4CAF50;
 		}
 		.pageTaxCalc .bg {
 			width: 100%
@@ -96,9 +99,10 @@
             text-align: center;
             }
 
-            .priceTaxCalc .grey {
+            .priceTaxCalc .greyTaxCalc {
             background-color: #eee;
             font-size: 20px;
+            color: black;
             }
             /* The "Sign Up" button */
             .buttonTaxCalc {
@@ -110,8 +114,8 @@
             text-decoration: none;
             font-size: 18px;
             }
-            .textTaxCalc{
-            font
+            .textTaxCalc {
+                color: black;
             }
 
             /* Change the width of the three columns to 100%
@@ -147,60 +151,60 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
 // print_r($form_configuration[0]->name);
 ?>
 @section('content')
-<body class="main_layout">
-<div class="form">
-    @if (Auth::check())
+<div class="">
     
-            <div class="pageTaxCalc printMenuCalculator">
-                <ol>
-                    <li>Fill all grey fields</li>
-                    <li>Print pdf<br>
-                        <a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="http://trevellasmanorfarmcampsite.co.uk/wp-content/uploads/2017/08/pdf-printer-icon.png"><br><em>PDF file for print will be downloaded.</em></a><br>
-                    </li>
-                </ol>
-            </div>    
-    @else
-            <div class="pageTaxCalc calcOverWin">
-                <div class="calcOverWinMessage">
-                    <div>
-                        <div id="s"><br><br>We are happy to have you here, but it seems you are not registered.<br>Please select the right plan.<br><br></div>
+            @if (Auth::check())
+            
+                    <div class="pageTaxCalc printMenuCalculator">
+                        <ol>
+                            <li>Fill all grey fields</li>
+                            <li>Print pdf<br>
+                                <a href="/print/2177782_2018_usafd_63D112071485823DE41B52450728BC" onclick="return generate();" id="p"><img src="http://trevellasmanorfarmcampsite.co.uk/wp-content/uploads/2017/08/pdf-printer-icon.png"><br><em>PDF file for print will be downloaded.</em></a><br>
+                            </li>
+                        </ol>
                     </div>    
-                    <div>
-                        <!-- menu -->
-                        <div class="columnsTaxCalc">
-                            <ul class="priceTaxCalc">
-                                <li class="headerTaxCalc">Basic</li>
-                                <li class="greyTaxCalc">$ 0 / year</li>
-                                <li>Free calculation up to $ 6000</li>
-                                <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
-                            </ul>
-                            </div>
-                            
-                            <div class="columnsTaxCalc">
-                                <ul class="priceTaxCalc">
-                                    <li class="headerTaxCalc" style="background-color:#4CAF50">Pro</li>
-                                    <li class="greyTaxCalc">$ 24.99 / year</li>
-                                    <li>Print pdf</li>
-                                    <li>Save history</li>
-                                    <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
-                                </ul>
-                            </div>
-                            
-                            <div class="columnsTaxCalc">
-                                <ul class="priceTaxCalc">
-                                    <li class="headerTaxCalc">Premium</li>
-                                    <li class="greyTaxCalc">$ 49.99 / year</li>
-                                    <li>Print pdf</li>
-                                    <li>Save history</li>
-                                    <li>Online Support</li>
-                                    <li class="greyTaxCalc"><a href="{{ url('/register')}}" class="buttonTaxCalc">Sign Up</a></li>
-                                </ul>
-                            </div>
+            @else
+                    <div class="pageTaxCalc calcOverWin">
+                        <div class="calcOverWinMessage">
+                            <div>
+                                <div id="s"><br><br>We are happy to have you here, but it seems you are not registered.<br>Please select the right plan.<br><br></div>
+                            </div>    
+                            <div>
+                                <!-- menu -->
+                                <div class="columnsTaxCalc">
+                                    <ul class="priceTaxCalc">
+                                        <li class="headerTaxCalc">Basic</li>
+                                        <li class="greyTaxCalc">$ 0 / year</li>
+                                        <li class="textTaxCalc">Free calculation up to $ 6000</li>
+                                        <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                    </ul>
+                                    </div>
+                                    
+                                    <div class="columnsTaxCalc">
+                                        <ul class="priceTaxCalc">
+                                            <li class="headerTaxCalc" style="background-color:#4CAF50">Pro</li>
+                                            <li class="greyTaxCalc">$ 24.99 / year</li>
+                                            <li class="textTaxCalc">Print pdf</li>
+                                            <li class="textTaxCalc">Save history</li>
+                                            <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="columnsTaxCalc">
+                                        <ul class="priceTaxCalc">
+                                            <li class="headerTaxCalc">Premium</li>
+                                            <li class="greyTaxCalc">$ 49.99 / year</li>
+                                            <li class="textTaxCalc">Print pdf</li>
+                                            <li class="textTaxCalc">Save history</li>
+                                            <li class="textTaxCalc">Online Support</li>
+                                            <li class="greyTaxCalc"><a href="{{ url('/login')}}" class="buttonTaxCalc">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>        
                         </div>
-                    </div>        
-                </div>
-            </div>
-    @endif
+                    </div>
+            @endif
 
         @foreach ($form_configuration as $page)
                     <div class="pageTaxCalc">
@@ -240,15 +244,11 @@ $form_configuration=json_decode(json_encode($form_configuration,false));
                 </div>
                 @endforeach
 
-    </div>
-    
+</div>    
     <script>
-        
-        
-        
         document.querySelector('[name="%FDitem8%"]').addEventListener('change', () => {
-   calculate();
-});
+        calculate();
+        });
 
 function calculate(){
     const FDitem8 = document.querySelector('[name="%FDitem8%"]').value;//
@@ -290,5 +290,5 @@ function calculate(){
     
 }
 </script>
-</body>
+
 @endsection
