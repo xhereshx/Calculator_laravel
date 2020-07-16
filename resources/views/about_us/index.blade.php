@@ -16,7 +16,7 @@
     <div class="item">
     <p><img class="founders" src="https://ca.slack-edge.com/T011Q5YH07R-U012BA4GL2W-1eb61206b7bc-512" alt="Petr Jandal"></p>
     <h1 class="textColor">Petr Jandal</h1>
-    <p class="text textColor">about Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima voluptatibus dolorem facilis natus quis deserunt quas sequi aliquam voluptas autem! Autem architecto quos ab in sunt beatae veritatis quod esse?</p>
+    <p class="text textColor">All my live i was working hard man. Before few year big change happened. I got married and have my first son. From that time i was looking for better work-like ballance. I found as programmer i need just my laptop and wifi to work, so i can travel with my fammily in our caravan whole summer around all Europe. It is why i am programmer.</p>
     </div>
 
     <div class="item">
