@@ -1,11 +1,12 @@
 .profile-container {
     width: 100vw;
     height: 100vh;
-	display: flex;
+	  display: flex;
     // flex-wrap: wrap;
     // justify-content: center;
     // align-items: center;
-    padding: 30px;
+    padding: 2rem;
+    margin-left: 2rem;
 }
 
 .wrap-profile {
@@ -16,7 +17,7 @@
 	display: flex;
 	// flex-wrap: wrap;
 	// justify-content: space-between;
-	padding: 80px 130px 120px 130px;
+	padding: 80px 100px 120px 100px;
 }
 
 .wrap-profile-info {
@@ -32,7 +33,7 @@
 }
 
 .profile-title {
-  	font-size: 25px;
+  	font-size: 20px;
   	font-weight: bold;
   	color: #01415f;
 }
