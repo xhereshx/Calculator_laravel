@@ -25,7 +25,7 @@
         <p>{{(($MortgageCalculator->Choosent_payment_time)*12)*($MortgageCalculator->age)}} CZK</p>
         <h2>Interest which you will pay:</h2>
         <p>{{((($MortgageCalculator->Choosent_payment_time)*12)*($MortgageCalculator->age)) - $MortgageCalculator->Max_mortgage}} CZK</p>
-        <p>{{$MortgageCalculator->Max_mortgage_savings}}</p>
+        <!-- <p>{{$MortgageCalculator->Max_mortgage_savings}}</p> -->
         
             
    </div> 
