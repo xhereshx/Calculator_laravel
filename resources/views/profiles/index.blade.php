@@ -62,8 +62,8 @@
         Mortgage Calculator Result
         <div class="mortgage-profile">
           <ul>
-              <li><a href='/products/mortgage_calculator/result/1'>Result 1</a></li>
-              <li><a href='/products/mortgage_calculator/result/2'>Result 2</a></li>
+              <li><a href="{{ url('/products/mortgage_calculator/result/1')}}">Result 1</a></li>
+              <li><a href="{{ url('/products/mortgage_calculator/result/2')}}">Result 2</a></li>
           </ul>
         </div>
       </div>
