@@ -13,7 +13,7 @@
         <p>Are you available for mortgage? How much you can borrow? Let's calculate it with our great calculator.</p>
         <button><a class="productsbutton" href="http://www.calculator.test/products/mortgage_calculator">Go to page</a></button></div>
         <div class="itemproducts"><h2>Tax Calculator</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis nesciunt quam aspernatur dolore sapiente praesentium, unde est omnis voluptate nulla odit necessitatibus fugiat, laboriosam debitis iure! Similique, voluptatum expedita.</p>
+        <p>Quickly estimate your tax refund amount with our convenient tax return calculator. This interactive calculator provides accurate insight into how much you may get back this year or what you may owe before you file.</p>
         <button><a class="productsbutton"href="http://www.calculator.test/testmodel">Go to page</a></button></div>
     </div>
 </div>

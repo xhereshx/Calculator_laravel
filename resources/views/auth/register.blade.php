@@ -100,6 +100,10 @@
                                 </button>
                             </div>
                         </div>
+                        <br>
+                        <div>
+                          Or login <a class="register-link" href="{{ route('login')}}">here</a>
+                        </div>
                     </form>
                 </div>
             </div>
